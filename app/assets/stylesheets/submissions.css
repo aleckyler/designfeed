@@ -2,3 +2,26 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+.field {
+  margin: 0px auto;
+}
+iframe {
+  width:800px;
+  height: 500px;
+}
+
+.code_input textarea {
+  margin: 0px auto 50px;
+  width: 300px;
+  height: 300px;
+}
+
+.code_input .field {
+  float: left;
+  text-align: center;
+}
+
+.actions {
+  clear: both;
+}

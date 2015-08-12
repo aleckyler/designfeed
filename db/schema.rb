@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812203213) do
+ActiveRecord::Schema.define(version: 20150812205326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,14 @@ ActiveRecord::Schema.define(version: 20150812203213) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "responses", force: :cascade do |t|
+    t.text     "comment"
+    t.text     "html"
+    t.text     "css"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
     t.integer  "playlist_id"
@@ -73,6 +81,15 @@ ActiveRecord::Schema.define(version: 20150812203213) do
   end
 
   add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id", using: :btree
+
+  create_table "submissions", force: :cascade do |t|
+    t.string   "title"
+    t.text     "entry"
+    t.text     "html"
+    t.text     "css"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "votes", force: :cascade do |t|
     t.integer  "playlist_id"

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @response.comment %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @response.html %>
+</p>
+
+<p>
+  <strong>Css:</strong>
+  <%= @response.css %>
+</p>
+
+<%= link_to 'Edit', edit_response_path(@response) %> |
+<%= link_to 'Back', responses_path %>

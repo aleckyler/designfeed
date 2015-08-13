@@ -37,3 +37,27 @@ h1 {
   font-weight: bold;
   text-align: center;
 }
+
+  /* this is to modify the appearance of the links   */
+
+a:link {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:active {
+  font-weight: bold;
+  text-decoration: none;
+}

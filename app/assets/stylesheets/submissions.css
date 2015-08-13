@@ -18,10 +18,20 @@ iframe {
 }
 
 .code_input .field {
-  float: left;
+  float: center;
   text-align: center;
 }
 
 .actions {
   clear: both;
+}
+
+  /* this is to modify the appearance of the header 'New Submission'  */
+
+h1 {
+  font-family: 'Unica One', cursive;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1em;
 }

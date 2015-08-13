@@ -11,7 +11,7 @@
       <th>Entry</th>
       <th>HTML</th>
       <th>CSS</th>
-      <th>Email</th>
+      <th>Creator</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
         <td><%= submission.entry %></td>
         <td><%= submission.html %></td>
         <td><%= submission.css %></td>
-        <td><%# submission.user.email %></td>
+        <td><%= Profile.where(user_id: submission.user_id).first.username %></td>
         <td><%= link_to 'Show', submission %></td>
         <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
         <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>

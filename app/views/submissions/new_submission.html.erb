@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= Submission.find(params[:id]).title %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= Submission.find(params[:id]).entry %>
+</p>
+
+<p>
+  <strong>HTML:</strong>
+  <%= Submission.find(params[:id]).html %>
+</p>
+
+<p>
+  <strong>CSS:</strong>
+  <%= Submission.find(params[:id]).css %>
+</p>
+
+
+<% code = "<!DOCTYPE html><html><head>
+  <meta charset='utf-8'>
+  <title>My Portfolio Site</title>
+  <style type='text/css'>
+    #{Submission.find(params[:id]).css}
+  </style>
+</head>
+<body> #{Submission.find(params[:id]).html}</body></html>" %>
+<div class="iframe">
+  <iframe srcdoc="<%= code %>" >
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+</div>
+
+
+<%= link_to 'Edit', edit_submission_path(Submission.find(params[:id])) %> |
+<%= link_to 'Submissions', submissions_path %>

@@ -29,7 +29,7 @@ class SubmissionsController < ApplicationController
 
     respond_to do |format|
       if @submission.save
-        format.html { redirect_to @submission, notice: 'Submission was successfully created.' }
+        format.html { redirect_to new_submission_submission_path(@submission), notice: 'Submission was successfully created.' }
         format.json { render :show, status: :created, location: @submission }
       else
         format.html { render :new }
@@ -72,4 +72,6 @@ class SubmissionsController < ApplicationController
     def submission_params
       params.require(:submission).permit(:title, :entry, :html, :css, :user_id)
     end
+
+
 end

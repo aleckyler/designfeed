@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :submissions
   has_many :responses
-  has_one :profile
+  has_many :profiles
 end

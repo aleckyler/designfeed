@@ -15,5 +15,13 @@
   <%= @profile.about_me %>
 </p>
 
+<p>
+  <strong>My Submissions:</strong>
+</p>
+<% Submission.where(user_id: @profile.user_id).each do |submission| %>
+  <li><%= link_to "#{submission.title}", submission %></li>
+<% end %>
+<br>
+
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

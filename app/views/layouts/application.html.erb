@@ -8,13 +8,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
+
   <p class="alert"><%= alert %></p>
   <% if user_signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% if Profile.where(user_id: current_user.id).length != 0 %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> |
+      <%= link_to "View My Profile", profile_path(Profile.where(user_id: current_user.id).first.id) %> |
+      <%= link_to "Edit My Profile", edit_profile_path(Profile.where(user_id: current_user.id).first.id) %>
+    <% end %>
   <%else%>
-  <%= link_to "Sign Up", new_user_registration_path %>
-  <%= link_to "Sign In", new_user_session_path %>
+    <%= link_to "Sign Up", new_user_registration_path %> |
+    <%= link_to "Sign In", new_user_session_path %>
   <% end %>
 <%= yield %>
 

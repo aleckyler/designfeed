@@ -23,7 +23,7 @@
         <td><%= submission.entry %></td>
         <td><%= submission.html %></td>
         <td><%= submission.css %></td>
-        <td><%= submission.user.email %></td>
+        <td><%# submission.user.email %></td>
         <td><%= link_to 'Show', submission %></td>
         <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
         <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>

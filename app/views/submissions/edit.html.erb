@@ -1,6 +1,12 @@
+<% if @submission.user_id != current_user.id %>
+  <h2>This is not your submission to edit.</h2>
+<% else %>
+
 <h1>Editing Submission</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @submission %> |
 <%= link_to 'Back', submissions_path %>
+
+<% end %>

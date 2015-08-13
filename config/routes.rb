@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root 'submissions#index'
-  
   resources :submissions
   resources :profiles
   get 'responses', to: 'responses#index'

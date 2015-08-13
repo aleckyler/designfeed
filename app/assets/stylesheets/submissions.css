@@ -8,7 +8,7 @@ body {
 
 .field, .code_input, .actions {
   /*margin-bottom: 10px;*/
-  width: 612px;
+  width: 613px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -26,8 +26,8 @@ iframe {
 }
 
 
-.code_input .field {
-  float: center;
+.code_input .code_field {
+  float: left;
   text-align: center;
 }
 

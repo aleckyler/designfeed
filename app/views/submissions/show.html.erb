@@ -20,5 +20,21 @@
   <%= @submission.css %>
 </p>
 
+
+<% code = "<!DOCTYPE html><html><head>
+  <meta charset='utf-8'>
+  <title>My Portfolio Site</title>
+  <style type='text/css'>
+    #{@submission.css}
+  </style>
+</head>
+<body> #{@submission.html}</body></html>" %>
+<div class="iframe">
+  <iframe srcdoc="<%= code %>" >
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+</div>
+
+
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>

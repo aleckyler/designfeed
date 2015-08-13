@@ -23,6 +23,7 @@
     <%= f.label :css %><br>
     <%= f.text_area :css %>
   </div>
+  <%= f.hidden_field :submission_id, value: @submission.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

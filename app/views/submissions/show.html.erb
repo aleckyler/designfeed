@@ -35,6 +35,22 @@
   </iframe>
 </div>
 
+<div class="comment">
+  <h3 class="new_response_head">New Response</h3>
+</div>
+<%= render 'responses/form' %>
+
+<h3>Responses:</h3>
+
+<% @submission.responses.each do |response| %>
+  <div class="comment show_sections">
+    <%= response.comment %>
+    <%= response.html %>
+    <%= response.css %>
+    <br>
+    <p class="timestamp">Added on: <%= response.created_at %></p>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>

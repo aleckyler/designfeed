@@ -2,3 +2,38 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+/*
+  This is the CSS for the profiles page.
+*/
+
+body {
+/* background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */
+/* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+/* background: -webkit-radial-gradient(radial-gradient (#cdeb8e 25%, #a5c956 50%); /* Chrome10+,Safari5.1+ */
+/* background: -o-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* Opera 12+ */
+/* background: -ms-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* IE10+ */
+background: linear-gradient(#FEFFFF 20%, #BFE8F9 50%, #2AB0ED 90%); /* W3C */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: auto;
+}
+
+  /* this is to modify the appearance of the 'DesignFeed' title */
+p.title {
+  font-family: 'Unica One', cursive;
+  font-size: 8em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0.15em;
+  padding-bottom: -0.75em;
+}
+
+  /* this is to modify the appearance of the header   */
+h1 {
+  font-family: 'Unica One', cursive;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+}

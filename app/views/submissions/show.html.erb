@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @submission.title %>
-</p>
+<div class="title_and_entry">
+    <h2 class="title"><%= @submission.title %></h2>
 
-<p>
-  <strong>Entry:</strong>
-  <%= @submission.entry %>
-</p>
+  <p class="entry">
+    <strong>Entry:</strong>
+    <%= @submission.entry %>
+  </p>
+</div>
 
 <div class="code_box">
   <div class="html_box">

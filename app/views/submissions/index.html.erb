@@ -9,8 +9,7 @@
     <tr>
       <th>Title</th>
       <th>Entry</th>
-      <th>HTML</th>
-      <th>CSS</th>
+      <th>Responses</th>
       <th>Creator</th>
       <th colspan="3"></th>
     </tr>
@@ -21,12 +20,11 @@
       <tr>
         <td><%= submission.title %></td>
         <td><%= submission.entry %></td>
-        <td><%= submission.html %></td>
-        <td><%= submission.css %></td>
+        <td><%= Response.where(submission_id: submission.id).count %></td>
         <td><%= Profile.where(user_id: submission.user_id).first.username %></td>
         <td><%= link_to 'Show', submission %></td>
-        <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
         <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

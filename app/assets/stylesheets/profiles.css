@@ -82,3 +82,55 @@ a:active {
   font-weight: bold;
   text-decoration: none;
 }
+
+.avatar_mini {
+  height: 150px;
+  width: 150px;
+}
+
+.avatar_profile {
+
+}
+
+.avatar_image {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+.avatar_list_item {
+  display: inline-block;
+}
+
+.avatar_image_selector {
+  height: 160px;
+  width: 677px;
+  margin: 0px auto 0px;
+  /*border: 1px solid;*/
+  white-space: nowrap;
+  text-align: start;
+  /*background: white;*/
+  overflow-x: scroll;
+  padding: 10px;
+
+}
+
+#profile_about_me {
+  width: 550px;
+  height: 100px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.selected {
+  background: yellow;
+}

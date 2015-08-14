@@ -11,7 +11,7 @@
 
   <p class="alert"><%= alert %></p>
   <div class="nav_bar">
-    <ul><li>Home</li>
+    <ul><li><%= link_to 'Home', welcome_index_path %></li>
       <li><%= link_to 'User Profiles', profiles_path %></li>
       <li>
         Submissions
@@ -40,7 +40,7 @@
 
   </div>
   <div class="nav_bar_space">
-    
+
   </div>
 
 <%= yield %>

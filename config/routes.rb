@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   devise_for :users, controllers: { registrations: "registrations" }
-  root 'submissions#index'
+  root 'welcome#index'
   resources :submissions do
     member do
       get 'new_submission'

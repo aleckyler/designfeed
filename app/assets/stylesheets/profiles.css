@@ -23,26 +23,32 @@ background-size: auto;
   /* this is to modify the appearance of the 'DesignFeed' title
   as well as the circular border around the title */
 
-p.title {
-  color: white;
-  font-family: 'Unica One', cursive;
-  font-size: 7.5em;
-  font-weight: bold;
-  text-align: inherit;
-  line-height: 0.75em;
-  position: relative;
+div.title_circle {
+
   /*padding-bottom: -0.5em;*/
-  width: 3.5em;
-  height: 3.5em;
+  width: 25em;
+  height: 25em;
   margin: auto;
   display: inline-block;
-  border-radius: 5em;
+  border-radius: 12.5em;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   /*background-color: rgba(45, 44, 44, 0.9);*/
   /*background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
   /*background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
   /*background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
   background: radial-gradient(circle, grey, black); /* Standard syntax */
+}
+
+div.title {
+  color: white;
+  font-family: 'Unica One', cursive;
+  font-size: 7.5em;
+  font-weight: bold;
+  text-align: inherit;
+  line-height: 0.75em;
+  margin: auto;
+  margin-top: 28%;
+  display: inline-block;
 }
 
   /* this is to modify the appearance of the header   */

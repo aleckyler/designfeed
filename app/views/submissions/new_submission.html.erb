@@ -1,26 +1,22 @@
 <p id="notice"><%= notice %></p>
+<div class="title_and_entry">
+  <h2 class="title"><%= Submission.find(params[:id]).title %></h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= Submission.find(params[:id]).title %>
-</p>
-
-<p>
-  <strong>Entry:</strong>
-  <%= Submission.find(params[:id]).entry %>
-</p>
+  <p class="entry">
+    <strong>Entry:</strong>
+    <%= Submission.find(params[:id]).entry %>
+  </p>
+</div>
 
 <div class="code_box">
   <div class="html_box">
       <strong>HTML:</strong>
-      <div class="html_field">
-        <%= Submission.find(params[:id]).html %>
+      <div class="html_field"><%= Submission.find(params[:id]).html %>
       </div>
   </div>
   <div class="css_box">
       <strong>CSS:</strong>
-      <div class="css_field">
-        <%= Submission.find(params[:id]).css %>
+      <div class="css_field"><%= Submission.find(params[:id]).css %>
       </div>
   </div>
 </div>

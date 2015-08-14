@@ -26,8 +26,8 @@ p.title {
   font-size: 8em;
   font-weight: bold;
   text-align: center;
-  padding-top: 0.15em;
-  padding-bottom: -0.75em;
+  line-height: normal;
+  padding-bottom: -0.05em;
 }
 
   /* this is to modify the appearance of the header   */
@@ -41,7 +41,7 @@ h1 {
   /* this is to modify the appearance of the links   */
 
 a:link {
-  color: red;
+  color: black;
   font-weight: bold;
   text-decoration: none;
 }

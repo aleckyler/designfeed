@@ -11,18 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" id="new_comment">
     <%= f.label :comment %><br>
     <%= f.text_area :comment %>
   </div>
-  <div class="field">
-    <%= f.label :html %><br>
-    <%= f.text_area :html %>
+
+  <div class="row more comment_code">
+    <div class="more-btn-container">
+      <a class="more-btn" href="#new_comment">Add code to your comment?</a>
+      <div class="code_input">
+        <div class="code_field">
+          <%= f.label :html, 'HTML'%><br>
+          <%= f.text_area :html %>
+        </div>
+        <div class="code_field">
+          <%= f.label :css, 'CSS' %><br>
+          <%= f.text_area :css %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :css %><br>
-    <%= f.text_area :css %>
-  </div>
+  <%= f.hidden_field :submission_id, value: @submission.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

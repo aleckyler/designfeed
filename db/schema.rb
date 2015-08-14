@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813000254) do
+ActiveRecord::Schema.define(version: 20150813191618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,19 @@ ActiveRecord::Schema.define(version: 20150813000254) do
     t.text     "about_me"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "profiles", ["username"], name: "index_profiles_on_username", unique: true, using: :btree
 
   create_table "responses", force: :cascade do |t|
     t.text     "comment"
     t.text     "html"
     t.text     "css"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "submission_id"
+    t.integer  "user_id"
   end
 
   create_table "submissions", force: :cascade do |t|

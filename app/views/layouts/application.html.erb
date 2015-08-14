@@ -8,14 +8,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
+
   <p class="alert"><%= alert %></p>
-  <%= link_to "Sign Up", new_user_registration_path %>
-  <% if user_signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <%else%>
-  <%= link_to "Sign In", new_user_session_path %>
-  <% end %>
+  <div class="nav_bar">
+    <ul><li>Home</li>
+      <li><%= link_to 'User Profiles', profiles_path %></li>
+      <li>
+        Submissions
+        <ul>
+          <li><%= link_to 'Create a New Submission', new_submission_path %></li>
+          <li><%= link_to 'View All Submissions', submissions_path %></li>
+        </ul>
+      </li>
+      <% if user_signed_in? %>
+        <% if Profile.where(user_id: current_user.id).length != 0 %>
+          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+          <li>
+            <%= Profile.where(user_id: current_user.id).first.username %>
+            <ul>
+              <li><%= link_to "View My Profile", profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
+              <li><%= link_to "Edit My Profile", edit_profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
+            </ul>
+          </li>
+        <% end %>
+      <%else%>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+      <li>FAQ</li>
+    </ul>
+
+  </div>
+  <div class="nav_bar_space">
+    
+  </div>
+
 <%= yield %>
 
 </body>

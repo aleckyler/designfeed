@@ -10,6 +10,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions/1
   # GET /submissions/1.json
   def show
+    @response = current_user.responses.build
   end
 
   # GET /submissions/new
@@ -28,7 +29,7 @@ class SubmissionsController < ApplicationController
 
     respond_to do |format|
       if @submission.save
-        format.html { redirect_to @submission, notice: 'Submission was successfully created.' }
+        format.html { redirect_to new_submission_submission_path(@submission), notice: 'Submission was successfully created.' }
         format.json { render :show, status: :created, location: @submission }
       else
         format.html { render :new }
@@ -69,6 +70,8 @@ class SubmissionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def submission_params
-      params.require(:submission).permit(:title, :entry, :html, :css)
+      params.require(:submission).permit(:title, :entry, :html, :css, :user_id)
     end
+
+
 end

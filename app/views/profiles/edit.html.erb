@@ -1,6 +1,12 @@
+<% if @profile.user_id != current_user.id %>
+  <h2>This is not your profile to edit.</h2>
+<% else %>
+
 <h1>Editing Profile</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Back', :back %>
+
+<% end %>

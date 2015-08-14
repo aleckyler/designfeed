@@ -16,47 +16,6 @@ ActiveRecord::Schema.define(version: 20150813191618) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "downvotes", force: :cascade do |t|
-    t.integer  "playlist_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "games", force: :cascade do |t|
-    t.string   "name"
-    t.string   "word"
-    t.string   "lives"
-    t.string   "underscore_array"
-    t.string   "word_array"
-    t.string   "available_letters"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "host_name"
-    t.string   "player_name"
-    t.string   "player_cell"
-    t.string   "player_email"
-    t.string   "chosen_letters"
-  end
-
-  create_table "playlists", force: :cascade do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "image"
-    t.text     "description"
-    t.text     "comment"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "plays", force: :cascade do |t|
-    t.text     "guess"
-    t.integer  "game_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "plays", ["game_id"], name: "index_plays_on_game_id", using: :btree
-
   create_table "profiles", force: :cascade do |t|
     t.string   "username"
     t.string   "avatar"
@@ -77,15 +36,6 @@ ActiveRecord::Schema.define(version: 20150813191618) do
     t.integer  "submission_id"
     t.integer  "user_id"
   end
-
-  create_table "reviews", force: :cascade do |t|
-    t.text     "comment"
-    t.integer  "playlist_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id", using: :btree
 
   create_table "submissions", force: :cascade do |t|
     t.string   "title"
@@ -115,12 +65,4 @@ ActiveRecord::Schema.define(version: 20150813191618) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "votes", force: :cascade do |t|
-    t.integer  "playlist_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_foreign_key "plays", "games"
-  add_foreign_key "reviews", "playlists"
 end

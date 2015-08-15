@@ -44,7 +44,10 @@
 <h3>Responses:</h3>
 
 <% @submission.responses.each do |response| %>
-  <div class="comment show_sections" id="comment_<%= response.id %>">
+  <div class="comment_hidden_div" id="comment_<%= response.id %>">
+ 
+  </div>
+  <div class="comment show_sections">
     <h4><%= Profile.where(user_id: @response.user_id).first.username %></h4>
     <%= response.comment %>
     <%# Do we want to include this if statement so that the button to show a

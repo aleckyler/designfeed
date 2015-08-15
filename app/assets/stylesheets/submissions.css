@@ -88,7 +88,7 @@ h1 {
   font-size: 5.5em;
   font-weight: bold;
   text-align: center;
-  padding-top: 1em;
+  /*padding-top: 1em;*/
 }
 
 
@@ -135,4 +135,11 @@ h1 {
 
 #response_css, #response_html {
   margin-bottom: 10px;
+}
+
+.comment_hidden_div {
+  visibility: hidden;
+  float: left;
+  position: relative;
+  top: -70px;
 }

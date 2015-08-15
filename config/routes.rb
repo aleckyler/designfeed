@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'uploads/new'
+
+  get 'uploads/create'
+
+  get 'uploads/index'
+
   devise_for :users, controllers: { registrations: "registrations" }
   root 'submissions#index'
   resources :submissions do
@@ -9,6 +15,8 @@ Rails.application.routes.draw do
   resources :profiles
   get 'responses', to: 'responses#index'
   post 'responses', to: 'responses#create'
+  resources :uploads
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

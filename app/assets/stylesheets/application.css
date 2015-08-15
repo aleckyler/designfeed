@@ -32,6 +32,14 @@ h1 {
 .nav_bar_space {
   height: 50px;
 }
+.nav_bar1 {
+    width: 70%;
+    float: left;
+}
+.nav_bar2.user_link {
+    width: auto;
+    float: right;
+}
 
 .nav_bar ul {
   text-align: left;
@@ -101,6 +109,9 @@ h1 {
   display: block;
   opacity: 1;
   visibility: visible;
+}
+.nav_bar1 ul {
+    margin-left: 42%;
 }
 
 a {

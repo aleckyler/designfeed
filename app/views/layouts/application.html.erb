@@ -15,7 +15,11 @@
 <% else %>
 
     <p class="alert"><%= alert %></p>
-    <div class="nav_bar">
+
+<div class="nav_bar">
+
+
+    <div class="nav_bar1">
       <ul><li><%= link_to 'Home', welcome_index_path %></li>
         <li><%= link_to 'User Profiles', profiles_path %></li>
         <li>
@@ -25,25 +29,30 @@
             <li><%= link_to 'View All Submissions', submissions_path %></li>
           </ul>
         </li>
-        <% if user_signed_in? %>
-          <% if Profile.where(user_id: current_user.id).length != 0 %>
-            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-            <li>
-              <%= Profile.where(user_id: current_user.id).first.username %>
-              <ul>
-                <li><%= link_to "View My Profile", profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
-                <li><%= link_to "Edit My Profile", edit_profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
-              </ul>
-            </li>
-          <% end %>
-        <%else%>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
         <li><%= link_to "FAQ", faq_index_path %></li>
       </ul>
 
     </div>
+    <div class="nav_bar2 user_link">
+    <ul>
+    <% if user_signed_in? %>
+      <% if Profile.where(user_id: current_user.id).length != 0 %>
+        <li>
+          <%= Profile.where(user_id: current_user.id).first.username %>
+          <ul>
+            <li><%= link_to "View My Profile", profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
+            <li><%= link_to "Edit My Profile", edit_profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+          </ul>
+        </li>
+      <% end %>
+    <%else%>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% end %>
+  </ul>
+  </div>
+  </div>
     <div class="nav_bar_space">
 
     </div>

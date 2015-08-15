@@ -22,7 +22,7 @@ h1 {
   position: fixed;
   height: 50px;
   top: 0px;
-  background: radial-gradient(circle, grey, black);
+  background: radial-gradient(circle, grey 40%, black 75%);
   width: 100%;
   margin-left: -10px;
   margin-right: -10px;

@@ -2,3 +2,34 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+
+/* this is to modify the appearance of the 'DesignFeed' title
+as well as the circular border around the title */
+
+div.title_circle {
+  width: 35em;
+  height: 35em;
+  margin: auto;
+  margin-top: 4em;
+  display: inline-block;
+  border-radius: 17em;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  /*background-color: rgba(45, 44, 44, 0.9);*/
+  /*background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+  /*background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+  /*background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, grey, black); /* Standard syntax */
+}
+
+div.title {
+  color: white;
+  font-family: 'Unica One', cursive;
+  font-size: 7.5em;
+  font-weight: bold;
+  text-align: inherit;
+  line-height: 0.75em;
+  margin: auto;
+  margin-top: 35%;
+  display: inline-block;
+}

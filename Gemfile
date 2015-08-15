@@ -6,6 +6,8 @@ gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'devise'
+gem 'aws-sdk', '< 2.0'
+gem 'dotenv-rails', :groups => [:development, :test]
 # group :development do
   # gem 'sqlite3'
   # gem 'mysql2'

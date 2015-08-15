@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
   get 'faq/index'
 
   get 'welcome/index'
+
 
   devise_for :users, controllers: { registrations: "registrations" }
   root 'welcome#index'
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   resources :profiles
   get 'responses', to: 'responses#index'
   post 'responses', to: 'responses#create'
+  resources :uploads
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

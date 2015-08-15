@@ -6,8 +6,7 @@
 </p>
 
 <p>
-  <strong>Avatar:</strong>
-  <%= @profile.avatar %>
+  <%= image_tag("#{@profile.avatar}.png", alt: "#{@profile.username} Avatar", class: "avatar_profile") %>
 </p>
 
 <p>

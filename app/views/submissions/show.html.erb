@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @submission.title %>
-</p>
+<div class="title_and_entry">
+    <h2 class="title"><%= @submission.title %></h2>
 
-<p>
-  <strong>Entry:</strong>
-  <%= @submission.entry %>
-</p>
+  <p class="entry">
+    <strong>Entry:</strong>
+    <%= @submission.entry %>
+  </p>
+</div>
 
-<p>
-  <strong>HTML:</strong>
-  <%= @submission.html %>
-</p>
-
-<p>
-  <strong>CSS:</strong>
-  <%= @submission.css %>
-</p>
-
+<div class="code_box">
+  <div class="html_box">
+      <strong>HTML:</strong>
+      <div class="html_field"><%= @submission.html %>
+      </div>
+  </div>
+  <div class="css_box">
+      <strong>CSS:</strong>
+      <div class="css_field"><%= @submission.css %>
+      </div>
+  </div>
+</div>
 
 <% code = "<!DOCTYPE html><html><head>
   <meta charset='utf-8'>
@@ -35,7 +36,7 @@
   </iframe>
 </div>
 
-<div class="comment">
+<div class="comment" id="new_comment">
   <h3 class="new_response_head">New Response</h3>
 </div>
 <%= render 'responses/form' %>
@@ -43,11 +44,53 @@
 <h3>Responses:</h3>
 
 <% @submission.responses.each do |response| %>
+  <div class="comment_hidden_div" id="comment_<%= response.id %>">
+ 
+  </div>
   <div class="comment show_sections">
+    <h4><%= Profile.where(user_id: @response.user_id).first.username %></h4>
     <%= response.comment %>
-    <%= response.html %>
-    <%= response.css %>
-    <br>
+    <%# Do we want to include this if statement so that the button to show a
+        comment's code is only displayed if there is code to display? i.e. button
+        won't be there if the commenter didn't include code %>
+    <% if !(response.html.blank? && response.css.blank?) %>
+      <div class="row more">
+        <div class="more-btn-container">
+          <a class="more-btn" href="#comment_<%= response.id %>">Show Code</a>
+          <div class="code_box">
+            <div class="html_box">
+                <strong>HTML:</strong>
+                <div class="html_field"><%= response.html %>
+                </div>
+            </div>
+            <div class="css_box">
+                <strong>CSS:</strong>
+                <div class="css_field"><%= response.css %>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row more">
+        <div class="more-btn-container">
+          <a class="more-btn" href="#comment_<%= response.id %>">Show Resulting Webpage</a>
+          <% code = "<!DOCTYPE html><html><head>
+            <meta charset='utf-8'>
+            <title>My Portfolio Site</title>
+            <style type='text/css'>
+              #{response.css}
+            </style>
+          </head>
+          <body> #{response.html}</body></html>" %>
+          <div class="iframe_box">
+            <iframe srcdoc="<%= code %>" >
+              <p>Your browser does not support iframes.</p>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <p class="timestamp">Added on: <%= response.created_at %></p>
   </div>
 <% end %>

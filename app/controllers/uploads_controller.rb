@@ -1,4 +1,3 @@
-
 class UploadsController < ApplicationController
   def new
   end
@@ -15,9 +14,9 @@ class UploadsController < ApplicationController
 
     # Create an object for the upload
     @upload = Upload.new(
-      url: obj.public_url,
-      name: obj.key
-    )
+            url: obj.public_url,
+        name: obj.key
+        )
 
     # Save the upload
     if @upload.save

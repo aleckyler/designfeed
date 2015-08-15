@@ -20,28 +20,49 @@ background-repeat: no-repeat;
 background-size: auto;
 }
 
-  /* this is to modify the appearance of the 'DesignFeed' title */
-p.title {
+  /* this is to modify the appearance of the 'DesignFeed' title
+  as well as the circular border around the title */
+
+div.title_circle {
+
+  /*padding-bottom: -0.5em;*/
+  width: 25em;
+  height: 25em;
+  margin: auto;
+  display: inline-block;
+  border-radius: 12.5em;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  /*background-color: rgba(45, 44, 44, 0.9);*/
+  /*background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+  /*background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+  /*background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, grey, black); /* Standard syntax */
+}
+
+div.title {
+  color: white;
   font-family: 'Unica One', cursive;
-  font-size: 8em;
+  font-size: 7.5em;
   font-weight: bold;
-  text-align: center;
-  padding-top: 0.15em;
-  padding-bottom: -0.75em;
+  text-align: inherit;
+  line-height: 0.75em;
+  margin: auto;
+  margin-top: 28%;
+  display: inline-block;
 }
 
   /* this is to modify the appearance of the header   */
 h1 {
   font-family: 'Unica One', cursive;
-  font-size: 4em;
+  font-size: 5.5em;
   font-weight: bold;
   text-align: center;
 }
 
-  /* this is to modify the appearance of the links   */
+  /* this is to modify the appearance of the links  */
 
 a:link {
-  color: red;
+  color: black;
   font-weight: bold;
   text-decoration: none;
 }
@@ -60,4 +81,56 @@ a:hover {
 a:active {
   font-weight: bold;
   text-decoration: none;
+}
+
+.avatar_mini {
+  height: 150px;
+  width: 150px;
+}
+
+.avatar_profile {
+
+}
+
+.avatar_image {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+.avatar_list_item {
+  display: inline-block;
+}
+
+.avatar_image_selector {
+  height: 160px;
+  width: 677px;
+  margin: 0px auto 0px;
+  /*border: 1px solid;*/
+  white-space: nowrap;
+  text-align: start;
+  /*background: white;*/
+  overflow-x: scroll;
+  padding: 10px;
+
+}
+
+#profile_about_me {
+  width: 550px;
+  height: 100px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.selected {
+  background: yellow;
 }

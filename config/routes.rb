@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'uploads/new'
 
-  get 'uploads/create'
+  get 'faq/index'
 
-  get 'uploads/index'
+  get 'welcome/index'
+
 
   devise_for :users, controllers: { registrations: "registrations" }
-  root 'submissions#index'
+  root 'welcome#index'
   resources :submissions do
     member do
       get 'new_submission'

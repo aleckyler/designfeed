@@ -143,3 +143,10 @@ h1 {
   position: relative;
   top: -70px;
 }
+
+.new_comment_hidden_div {
+  visibility: hidden;
+  float: left;
+  position: relative;
+  top: -210px;
+}

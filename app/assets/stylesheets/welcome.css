@@ -3,15 +3,15 @@
   They will automatically be included in application.css.
 */
 
-/* this is to modify the appearance of the 'DesignFeed' title
+/* This is to modify the appearance of the 'DesignFeed' title
 as well as the circular border around the title */
 
-body {
+/*body {
   background: linear-gradient(#CFEBA1, yellow);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: auto;
-}
+}*/
 
 div.title_circle {
   width: 36em;

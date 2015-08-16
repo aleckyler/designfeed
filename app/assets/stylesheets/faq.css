@@ -56,8 +56,15 @@ article, aside, figure, footer, header, hgroup, menu, nav, section {
   width: 50%;
   margin: 100px auto;
 }
+
+h1 {
+  margin-top: -5.5em;
+  margin-bottom: 2em;
+}
+
 h1, h2, p {
   font-family: 'Unica One', serif;
   font-size: 3em;
   margin: 20px 0;
+  line-height: normal;
 }

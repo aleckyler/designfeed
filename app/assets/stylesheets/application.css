@@ -71,7 +71,7 @@ h1 {
 .nav_bar ul li:hover {
   background: #555;
   color: #fff;
-  font-size: 1.7em;
+  /*font-size: 1.7em;*/
   line-height: normal;
 }
 

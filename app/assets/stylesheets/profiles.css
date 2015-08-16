@@ -20,15 +20,16 @@ background-repeat: no-repeat;
 background-size: auto;
 }
 
-  /* this is to modify the appearance of the header   */
+  /* This is to modify the appearance of the header   */
+  
 h1 {
-  font-family: 'Unica One', cursive;
+  font-family: 'Unica One', serif;
   font-size: 6.5em;
   font-weight: bold;
   text-align: center;
 }
 
-  /* this is to modify the appearance of the links  */
+  /* This is to modify the appearance of the links  */
 
 a:link {
   color: black;
@@ -51,6 +52,8 @@ a:active {
   font-weight: bold;
   text-decoration: none;
 }
+
+/* This is the CSS for the pre-set avatar images. */
 
 .avatar_mini {
   height: 150px;
@@ -84,10 +87,18 @@ a:active {
 
 }
 
+/* This is the text box for the 'About Me' under Profile.  */
+
 #profile_about_me {
   width: 550px;
   height: 100px;
+  font-size: 1.5em;
 }
+
+
+/* This code shows a visible horizontal scroll bar when scrolling
+through the pre-set avatar images. The background of the avatar turns
+yellow upon selection. */
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;

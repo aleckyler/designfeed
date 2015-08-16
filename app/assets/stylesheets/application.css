@@ -143,3 +143,19 @@ a:active {
     color: green;
     text-decoration: none;
 }
+
+
+.here_link:link, .here_link:visited {
+  color: brown;
+}
+.here_link:hover {
+    color: #2AB0ED;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+/* selected link */
+.here_link:active {
+    color: green;
+    text-decoration: none;
+}

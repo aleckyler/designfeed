@@ -1,4 +1,7 @@
 class UploadsController < ApplicationController
+  before_action :set_upload, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except: [:index, :show]
+
   def new
   end
 
@@ -15,7 +18,7 @@ class UploadsController < ApplicationController
     # Create an object for the upload
     @upload = Upload.new(
             url: obj.public_url,
-        name: obj.key
+        name: current_user.id
         )
 
     # Save the upload

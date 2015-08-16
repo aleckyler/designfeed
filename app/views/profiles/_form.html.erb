@@ -15,8 +15,12 @@
     <%= f.label :username %><br>
     <%= f.text_field :username %>
   </div>
+
   <div class="field">
     <%= f.label :avatar %><br>
+  </div>
+  <div class="field">
+    Upload a custom image for your Avatar <%= link_to 'here', new_upload_path, class: "here_link" %>.<br> Or select one from the list below:
   </div>
   <div class="avatar_image_selector">
     <% i = 1 %>

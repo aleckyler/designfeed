@@ -38,6 +38,11 @@ body {
   transition: all 0.2s;*/
 }
 
+.nav_bar a {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1em;
+}
+
 .nav_bar_space {
   height: 50px;
 }
@@ -62,9 +67,9 @@ body {
 }
 .nav_bar ul li {
     color: white;
-    font-family: 'Unica One', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-size: 1.5em;
-    font-weight: bold;
+    text-transform: uppercase;
     display: inline-block;
     margin-right: -5px;
     position: relative;

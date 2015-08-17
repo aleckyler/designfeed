@@ -37,6 +37,8 @@ div.title {
   margin: auto;
   margin-top: 20%;
   display: inline-block;
+  -webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
 }
 
 .title_container {
@@ -185,6 +187,16 @@ figure.effect-romeo p {
   visibility: hidden;
   padding-top: 6em;
 }
+
+figure.effect-romeo .title {
+	-webkit-transform: translate3d(0,0%,0);
+	transform: translate3d(0,0%,0);
+}
+
+/*figure.effect-romeo:hover .title {
+	-webkit-transform: translate3d(0,-100%,0) translate3d(0,50%,0);
+	transform: translate3d(0,-100%,0) translate3d(0,50%,0);
+}*/
 
 figure.effect-romeo h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);

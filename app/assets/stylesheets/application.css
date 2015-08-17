@@ -136,13 +136,13 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-    color: #2AB0ED;
+    color: #F2F2BE;
     background-color: inherit;
     text-decoration: none;
 }
 
 /* selected link */
 a:active {
-    color: green;
+    color: white;
     text-decoration: none;
 }

@@ -61,7 +61,13 @@ a:active {
 }
 
 .avatar_profile {
+  height: 256px;
+  width: 256px;
+}
 
+.avatar_index {
+  height: 150px;
+  width: 150px;
 }
 
 .avatar_image {

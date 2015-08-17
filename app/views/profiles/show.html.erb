@@ -6,7 +6,22 @@
 </p>
 
 <p>
-  <%= image_tag("#{@profile.avatar}.png", alt: "#{@profile.username} Avatar", class: "avatar_profile") %>
+  <% if Upload.where(name: @profile.user_id).count == 0 %>
+    <% if @profile.avatar == "" %>
+      <% if @profile.user_id == current_user.id %>
+        You have not selected an avatar or uploaded a custom profile picture.<br>
+        You can add a custom image for your avatar <%= link_to 'here', new_upload_path, class: "here_link" %>.<br>
+        Or select one from the list on the "Edit My Profile" page <%= link_to 'here', edit_profile_path, class: "here_link" %>.
+      <% else %>
+        <%= @profile.username %> has not selected an avatar or uploaded a custom profile picture.
+      <% end %>
+    <% else %>
+      <%= image_tag("#{@profile.avatar}.png", alt: "#{@profile.username}'s Avatar", class: "avatar_profile") %>
+    <% end %>
+  <% else %>
+  <img src="<%= Upload.where(name: @profile.user_id).last.url %>" alt="<%= @profile.username %>'s Profile Picture">
+  <% end %>
+
 </p>
 
 <p>
@@ -19,6 +34,14 @@
 </p>
 <% Submission.where(user_id: @profile.user_id).each do |submission| %>
   <li><%= link_to "#{submission.title}", submission %></li>
+<% end %>
+<br>
+
+<p>
+  <strong>Submissions I have responded to:</strong>
+</p>
+<% Response.where(user_id: @profile.user_id).each do |response| %>
+  <li><%= link_to "#{Submission.where(id: response.submission_id).first.title}", Submission.where(id: response.submission_id).first %></li>
 <% end %>
 <br>
 

@@ -131,14 +131,14 @@ figure.effect-romeo {
 figure.effect-romeo .title_circle {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,0,300px);
-	transform: translate3d(0,0,300px);
+	-webkit-transform: translate3d(0,0,0px);
+	transform: translate3d(0,0,0px);
 }
 
 figure.effect-romeo:hover .title_circle {
 	opacity: 0.6;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,300px);
+	transform: translate3d(0,0,300px);
 }
 
 figure.effect-romeo figcaption::before,

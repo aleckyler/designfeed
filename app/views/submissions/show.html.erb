@@ -50,7 +50,7 @@
 
   </div>
   <div class="comment show_sections">
-    <h4><%= Profile.where(user_id: @response.user_id).first.username %></h4>
+    <h4><%= Profile.where(user_id: response.user_id).first.username %></h4>
     <%= response.comment %>
     <%# Do we want to include this if statement so that the button to show a
         comment's code is only displayed if there is code to display? i.e. button

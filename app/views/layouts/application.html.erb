@@ -20,16 +20,16 @@
 
 
     <div class="nav_bar1">
-      <ul><li><%= link_to 'Home', welcome_index_path %></li>
-        <li><%= link_to 'User Profiles', profiles_path %></li>
-        <li>
+      <ul><li class="home"><%= link_to 'Home', welcome_index_path %></li>
+        <li class="user_profiles"><%= link_to 'User Profiles', profiles_path %></li>
+        <li class="submissions">
           Submissions
           <ul>
             <li><%= link_to 'Create a New Submission', new_submission_path %></li>
             <li><%= link_to 'View All Submissions', submissions_path %></li>
           </ul>
         </li>
-        <li><%= link_to "FAQ", faq_index_path %></li>
+        <li class="faq"><%= link_to "FAQ", faq_index_path %></li>
       </ul>
 
     </div>
@@ -42,7 +42,7 @@
           <ul>
             <li><%= link_to "View My Profile", profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
             <li><%= link_to "Edit My Profile", edit_profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
-            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+            <li class="sign_out"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
           </ul>
         </li>
       <% end %>

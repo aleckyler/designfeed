@@ -23,7 +23,7 @@ class UploadsController < ApplicationController
 
     # Save the upload
     if @upload.save
-      redirect_to uploads_path, success: 'File successfully uploaded'
+      redirect_to edit_profile_path(Profile.where(user_id: current_user.id).first.id), success: 'File successfully uploaded', notice: 'File successfully uploaded'
     else
       flash.now[:notice] = 'There was an error'
       render :new

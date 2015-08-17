@@ -42,12 +42,15 @@ body {
     font-family: 'Megrim', sans-serif;
     font-size: 1em;
 }
+.nav_bar ul li a {
+  background: none;
+}
 
 .nav_bar_space {
   height: 50px;
 }
 .nav_bar1 {
-    width: 80%;
+    width: 82%;
     float: left;
 }
 .nav_bar2.user_link {
@@ -136,7 +139,7 @@ body>.nav_bar>.nav_bar1>ul>li:hover .nav_bar {
   visibility: visible;
 }
 .nav_bar1>ul  {
-    margin-left: 25%;
+    margin-left: 21%;
 }
 
 

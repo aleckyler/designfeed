@@ -119,5 +119,4 @@ yellow upon selection. */
 
 .selected {
   background: yellow;
-  border-radius: 4px solid black;
 }

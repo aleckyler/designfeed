@@ -132,15 +132,13 @@ body>.nav_bar>.nav_bar1>ul>li:hover .nav_bar {
     margin-left: 44%;
 }
 
-<<<<<<< HEAD
-=======
 
 a {
   font-family: 'Unica One', cursive;
   font-size: 1em;
 }
 
->>>>>>> master
+
 /* unvisited link */
 a:link {
     color: white;

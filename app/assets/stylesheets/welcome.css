@@ -41,7 +41,7 @@ div.title {
 
 .title_container {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 56px;
 }
 .grid {
     display: inline-block;
@@ -183,7 +183,7 @@ figure.effect-romeo p {
 
 figure.effect-romeo p {
   visibility: hidden;
-padding-top: 6em;
+  padding-top: 6em;
 }
 
 figure.effect-romeo h2 {

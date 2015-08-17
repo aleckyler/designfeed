@@ -22,16 +22,18 @@
   <div class="field">
     Upload a custom image for your Avatar <%= link_to 'here', new_upload_path, class: "here_link" %>.<br> Or select one from the list below:
   </div>
-  <div class="avatar_image_selector">
-    <% i = 1 %>
-    <% 12.times do |image| %>
-      <li class="avatar_list_item">
-        <div class="avatar_image" id="<%= i %>">
-          <%= image_tag("#{i}.png", alt: "Avatar #{i}", class: "avatar_mini") %>
-        </div>
-      </li>
-      <% i += 1 %>
-    <% end %>
+  <div class="field scroll">
+    <div class="avatar_image_selector">
+      <% i = 1 %>
+      <% 12.times do |image| %>
+        <li class="avatar_list_item">
+          <div class="avatar_image" id="<%= i %>">
+            <%= image_tag("#{i}.png", alt: "Avatar #{i}", class: "avatar_mini") %>
+          </div>
+        </li>
+        <% i += 1 %>
+      <% end %>
+    </div>
   </div>
   <div class="field">
     <%= f.hidden_field :avatar, value: "" %>

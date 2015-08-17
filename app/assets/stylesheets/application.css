@@ -30,6 +30,7 @@ body {
   margin-left: -10px;
   margin-right: -10px;
   padding-right: 10px;
+  z-index: 1;
   /*-webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;

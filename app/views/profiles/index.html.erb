@@ -17,7 +17,7 @@
       <tr>
         <td><% if Upload.where(name: profile.user_id).count == 0 %>
           <% if profile.avatar == "" %>
-            No Image<br>Selected
+            <%= image_tag("11.png", alt: "#{profile.username}'s Default Avatar", class: "avatar_index") %>
           <% else %>
             <%= image_tag("#{profile.avatar}.png", alt: "#{profile.username}'s Avatar", class: "avatar_index") %>
           <% end %>

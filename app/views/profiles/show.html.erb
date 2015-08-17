@@ -13,7 +13,7 @@
         You can add a custom image for your avatar <%= link_to 'here', new_upload_path, class: "here_link" %>.<br>
         Or select one from the list on the "Edit My Profile" page <%= link_to 'here', edit_profile_path, class: "here_link" %>.
       <% else %>
-        <%= @profile.username %> has not selected an avatar or uploaded a custom profile picture.
+        <%= image_tag("11.png", alt: "#{@profile.username}'s Default Avatar", class: "avatar_profile") %>
       <% end %>
     <% else %>
       <%= image_tag("#{@profile.avatar}.png", alt: "#{@profile.username}'s Avatar", class: "avatar_profile") %>
@@ -40,8 +40,12 @@
 <p>
   <strong>Submissions I have responded to:</strong>
 </p>
+<% array = [] %>
 <% Response.where(user_id: @profile.user_id).each do |response| %>
-  <li><%= link_to "#{Submission.where(id: response.submission_id).first.title}", Submission.where(id: response.submission_id).first %></li>
+  <% if !(array.include? response.submission_id) %>
+    <li><%= link_to "#{Submission.where(id: response.submission_id).first.title}", Submission.where(id: response.submission_id).first %></li>
+    <% array << response.submission_id %>
+  <% end %>
 <% end %>
 <br>
 <br>

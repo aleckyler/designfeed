@@ -19,7 +19,7 @@
       <%= image_tag("#{@profile.avatar}.png", alt: "#{@profile.username}'s Avatar", class: "avatar_profile") %>
     <% end %>
   <% else %>
-  <img src="<%= Upload.where(name: @profile.user_id).last.url %>" alt="<%= @profile.username %>'s Profile Picture">
+  <img src="<%= Upload.where(name: @profile.user_id).last.url %>" alt="<%= @profile.username %>'s Profile Picture" class="avatar_profile">
   <% end %>
 
 </p>

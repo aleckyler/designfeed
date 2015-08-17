@@ -6,8 +6,8 @@
 <table>
   <thead>
     <tr>
-      <th>Username</th>
       <th>Avatar</th>
+      <th>Username</th>
       <th>Activity</th>
       <th colspan="3"></th>
     </tr>
@@ -16,9 +16,17 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
+        <td><% if Upload.where(name: profile.user_id).count == 0 %>
+          <% if profile.avatar == "" %>
+            No Image<br>Selected
+          <% else %>
+            <%= image_tag("#{profile.avatar}.png", alt: "#{profile.username}'s Avatar", class: "avatar_index") %>
+          <% end %>
+        <% else %>
+        <img src="<%= Upload.where(name: profile.user_id).last.url %>" alt="<%= profile.username %>'s Profile Picture" class="avatar_index">
+        <% end %></td>
         <td><%= profile.username %></td>
-        <td><%= profile.avatar %></td>
-        <td><%= Submission.where(user_id: profile.user_id).count %> Submissions, <%= Response.where(user_id: profile.user_id).count %> responses</td>
+        <td><%= Submission.where(user_id: profile.user_id).count %> Submissions,<br> <%= Response.where(user_id: profile.user_id).count %> responses</td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,5 +36,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Profile', new_profile_path %>

@@ -13,7 +13,7 @@ body {
 /* background: -webkit-radial-gradient(radial-gradient (#cdeb8e 25%, #a5c956 50%); /* Chrome10+,Safari5.1+ */
 /* background: -o-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* Opera 12+ */
 /* background: -ms-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* IE10+ */
-background: linear-gradient(#FEFFFF 20%, #BFE8F9 50%, #2AB0ED 90%); /* W3C */
+background: linear-gradient(#F2F2BE 25%, #08565A 90%); /* W3C */
 /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 background-attachment: fixed;
 background-repeat: no-repeat;
@@ -21,7 +21,7 @@ background-size: auto;
 }
 
   /* This is to modify the appearance of the header   */
-  
+
 h1 {
   font-family: 'Unica One', serif;
   font-size: 6.5em;
@@ -96,7 +96,7 @@ a:active {
 }
 
 
-/* This code shows a visible horizontal scroll bar when scrolling
+/* This shows a visible horizontal scroll bar when scrolling
 through the pre-set avatar images. The background of the avatar turns
 yellow upon selection. */
 
@@ -113,4 +113,5 @@ yellow upon selection. */
 
 .selected {
   background: yellow;
+  border-radius: 4px solid black;
 }

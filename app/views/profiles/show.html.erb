@@ -44,7 +44,8 @@
   <li><%= link_to "#{Submission.where(id: response.submission_id).first.title}", Submission.where(id: response.submission_id).first %></li>
 <% end %>
 <br>
-
+<br>
+<br>
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Profiles', profiles_path %> |
 <%= link_to 'Back', :back %>

@@ -39,7 +39,7 @@ body {
 }
 
 .nav_bar a {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Megrim', sans-serif;
     font-size: 1em;
 }
 .nav_bar ul li a {
@@ -70,9 +70,10 @@ body {
 }
 .nav_bar ul li {
     color: white;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Megrim', sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
+    font-weight: bold;
     display: inline-block;
     margin-right: -5px;
     position: relative;

@@ -58,6 +58,7 @@ body {
 
 /*code boxes on show page*/
 .html_field, .css_field {
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
   margin: 0px auto 0px;
   width: 284px;
   height: 300px;

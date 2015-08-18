@@ -3,32 +3,36 @@
 <h1>Listing Submissions</h1>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Entry</th>
-      <th>Responses</th>
-      <th>Creator</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
+
     <% @submissions.each do |submission| %>
-      <tr>
-        <td><%= submission.title %></td>
-        <td><%= submission.entry %></td>
-        <td><%= Response.where(submission_id: submission.id).count %></td>
-        <td><%= Profile.where(user_id: submission.user_id).first.username %></td>
-        <td><%= link_to 'Show', submission %></td>
-        <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <div class="submission_box">
+        <%# link_to submission.title %>
+        <div class="sub_left">
 
-      </tr>
+
+        <%= link_to "#{submission.title}", submission, {class:"submission_title"} %>
+        <%= link_to "#{submission.entry}", submission, {class:"submission_entry"}%>
+        </div>
+        <div class="sub_right">
+
+
+        <%= link_to "#{Response.where(submission_id: submission.id).count}", submission, {class:"sub_resp_count"} %>
+        <%= link_to "#{Profile.where(user_id: submission.user_id).first.username}", submission, {class:"sub_username"} %>
+        <%# if Profile.avatar == "" %>
+          <%# image_tag("11.png", alt: "#{Profile.username}'s Default Avatar", class: "avatar_index") %>
+        <%# else %>
+          <%# image_tag("#{Profile.avatar}.png", alt: "#{Profile.username}'s Avatar", class: "avatar_index") %>
+        <%# end %>
+
+        <%# link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+
     <% end %>
-  </tbody>
-</table>
 
-<br>
+
+
 
 <%= link_to 'New Submission', new_submission_path %>

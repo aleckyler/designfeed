@@ -189,3 +189,20 @@ a:active {
     color: green;
     text-decoration: none;
 }
+
+/*this is for index submission*/
+.submission_box a {
+    color: black;
+}
+.submission_box {
+    height: 100px;
+    width: 900px;
+}
+.sub_right {
+    width: 20%;
+    float: right;
+}
+.sub_left {
+    width: 80%;
+    float: left;
+}

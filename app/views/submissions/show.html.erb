@@ -92,7 +92,6 @@
         </div>
       </div>
     <% end %>
-<%= p response.id %>
     <p class="timestamp">Added on: <%= response.created_at %></p>
     <% if response.user_id == current_user.id %>
       <%= link_to 'Edit', edit_response_path(response) %> |

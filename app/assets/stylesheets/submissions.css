@@ -62,15 +62,15 @@ body {
   font-size: 1.4em;
   line-height: normal;
   margin: 0em auto 0em;
-  width: 21.846em;
-  height: 23.077em;
+  width: 15.6050em;
+  height: 16.484em;
   border: 0.077em solid;
   white-space: pre;
   word-wrap: break-word;
   text-align: start;
   background: white;
   overflow: scroll;
-  padding: 0.769em;
+  padding: 0.549em;
 }
 
 .code_input .code_field, .html_box, .css_box {

@@ -55,7 +55,7 @@ body {
   height: 300px;
 }
 
-/*code boxes on show page*/
+/* The HTML and CSS text field boxes on sub page */
 .html_field, .css_field {
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
   font-size: 1.4em;
@@ -83,7 +83,7 @@ body {
   clear: both;
 }
 
-  /* this is to modify the appearance of the header 'New Submission'  */
+  /* This modifies the appearance of the header 'New Submission'  */
 
 h1 {
   font-family: 'Unica One', cursive;
@@ -94,7 +94,7 @@ h1 {
 }
 
 
-/*for the show code options in displaying the comments*/
+/* For the show code options in displaying the comments*/
 
 .more {
   /*background: rgba(255,255,255,0.1);*/

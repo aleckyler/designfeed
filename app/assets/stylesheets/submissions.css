@@ -5,54 +5,55 @@
 
 body {
   text-align: center;
+  font-size: 13px;
 }
 
 .field, .code_input, .actions, .code_box {
-  /*margin-bottom: 10px;*/
-  width: 620px;
+  /*margin-bottom: 0.769em;*/
+  width: 47.692em;
   text-align: center;
-  margin: 0px auto 50px;
+  margin: 0em auto 3.846em;
 }
 
 .title_and_entry {
-  width: 700px;
+  width: 53.846em;
   text-align: left;
-  margin: 0px auto 50px;
+  margin: 0em auto 3.846em;
 }
 
 .title {
-  margin-bottom: 30px;
+  margin-bottom: 2.308em;
 }
 
 .code_box {
-  height: 324px;
+  height: 24.615em;
 }
 
 .iframe iframe {
-  width:800px;
-  height: 500px;
+  width: 61.538em;
+  height: 38.462em;
 }
 
 .timestamp {
   text-align: right;
-  margin-top: 0px;
+  margin-top: 0em;
 }
 
 .comment {
-  width: 700px;
+  width: 53.846em;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
 
 .show_sections {
-  margin-bottom: 50px;
+  margin-bottom: 3.846em;
 }
 
 .code_field textarea {
-  margin: 0px auto 50px;
-  width: 300px;
-  height: 300px;
+  margin: 0em auto 4.55em;
+  width: 27.273em;
+  height: 27.273em;
 }
 
 /* The HTML and CSS text field boxes on sub page */
@@ -60,23 +61,23 @@ body {
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
   font-size: 1.4em;
   line-height: normal;
-  margin: 0px auto 0px;
-  width: 284px;
-  height: 300px;
-  border: 1px solid;
+  margin: 0em auto 0em;
+  width: 21.846em;
+  height: 23.077em;
+  border: 0.077em solid;
   white-space: pre;
   word-wrap: break-word;
   text-align: start;
   background: white;
   overflow: scroll;
-  padding: 10px;
+  padding: 0.769em;
 }
 
 .code_input .code_field, .html_box, .css_box {
   float: left;
   text-align: center;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 0.154em;
+  margin-right: 0.154em;
 }
 
 .actions {
@@ -98,18 +99,18 @@ h1 {
 
 .more {
   /*background: rgba(255,255,255,0.1);*/
-  /*border-bottom: 1px solid rgba(0,0,0,0.25);
-  border-top: 1px solid rgba(255,255,255,0.1);*/
-  /*box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
+  /*border-bottom: 0.077em solid rgba(0,0,0,0.25);
+  border-top: 0.077em solid rgba(255,255,255,0.1);*/
+  /*box-shadow: 0 0.154em 0.769em rgba(0,0,0,0.1);*/
   margin: 0 auto 0;
-  padding: 2px 15px;
-  width: 620px;
+  padding: 0.154em 1.154em;
+  width: 47.692em;
   /*position: relative;*/
 }
 
 .comment_code {
-  margin-bottom: 10px;
-  margin-top: -5px;
+  margin-bottom: 0.769em;
+  margin-top: -0.385em;
 }
 
 .more-btn-container {
@@ -129,28 +130,28 @@ h1 {
 }
 
 .iframe_box iframe, .iframe_box {
-  width:620px;
-  height: 500px;
+  width: 47.692em;
+  height: 38.462em;
   margin-left: auto;
   margin-right: auto;
 }
 
 #response_css, #response_html {
-  margin-bottom: 10px;
+  margin-bottom: 0.769em;
 }
 
 .comment_hidden_div {
   visibility: hidden;
   float: left;
   position: relative;
-  top: -70px;
+  top: -5.385em;
 }
 
 .new_comment_hidden_div {
   visibility: hidden;
   float: left;
   position: relative;
-  top: -210px;
+  top: -16.154em;
 }
 
 .here_link {
@@ -162,27 +163,27 @@ h1 {
     color: black;
 }
 .submission_box {
-    margin: 20px auto;
-    height: 100px;
-    width: 900px;
-    padding: 15px;
-    border-radius: 7px;
-    -moz-box-shadow: spread 0 0 2.5px rgba(0,0,0, 0.75);
-    box-shadow: spread 0 0 2.5px rgba(0,0,0, 0.75);
+    margin: 1.538em auto;
+    height: 7.692em;
+    width: 69.231em;
+    padding: 1.154em;
+    border-radius: 0.538em;
+    -moz-box-shadow: spread 0 0 0.192em rgba(0,0,0, 0.75);
+    box-shadow: spread 0 0 0.192em rgba(0,0,0, 0.75);
     background-color: white;
 }
 
 .sub_right {
     width: 15%;
     float: right;
-    height: 100px;
+    height: 7.692em;
     color: black !important;
 }
 
 .sub_left {
     width: 80%;
     float: left;
-    height: 100px;
+    height: 7.692em;
     color: black !important;
 }
 
@@ -200,9 +201,9 @@ h1 {
 
 .submission_title {
     float: left;
-    height: 20px;
-    margin: 5px;
-    margin-right: 15px;
+    height: 1.538em;
+    margin: 0.385em;
+    margin-right: 1.154em;
 }
 
 .submission_title h3 {
@@ -213,9 +214,9 @@ h1 {
     clear: both;
     float: left;
     text-align: left;
-    height: 48px;
-    margin-left: 25px;
-    margin-right: 15px;
+    height: 3.692em;
+    margin-left: 1.923em;
+    margin-right: 1.154em;
     font-size: 1.2em;
     font-weight: normal;
 }
@@ -225,14 +226,14 @@ h1 {
   clear: both;
   /*position: relative;*/
   /*top: 82px;*/
-  /*bottom: 0px;
-  right: 0px;*/
-  height: 18px;
-  width: 100px;
+  /*bottom: 0em;
+  right: 0em;*/
+  height: 1.385em;
+  width: 7.692em;
   text-align: right;
 }
 
 .avatar_submissions {
-  height: 60px;
-  width: 60px;
+  height: 4.615em;
+  width: 4.615em;
 }

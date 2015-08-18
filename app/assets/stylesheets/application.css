@@ -78,7 +78,7 @@ h1 {
     display: inline-block;
     margin-right: -0.385em;
     position: relative;
-    padding: 1.154em 1.538em;
+    padding: 0.769em 1.026em;
     /* background: #fff; */
     cursor: pointer;
     -webkit-transition: all 0.2s;
@@ -92,7 +92,8 @@ h1 {
   background: #555;
   color: #fff;
   font-size: 1.7em;
-  line-height: 1.769em;
+  line-height: 1.041em;
+  padding: 0.679em 0.905em;
 }
 
 body>.nav_bar>.nav_bar1>ul>li:hover .nav_bar {

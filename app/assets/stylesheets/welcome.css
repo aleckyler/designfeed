@@ -103,8 +103,8 @@ div.title {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
+	font-size: 0em;
+	opacity: 0em;
 }
 
 .grid figure h2 {
@@ -138,8 +138,8 @@ figure.effect-romeo {
 figure.effect-romeo .title_circle {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,0,0px);
-	transform: translate3d(0,0,0px);
+	-webkit-transform: translate3d(0,0,0em);
+	transform: translate3d(0,0,0em);
 }
 
 figure.effect-romeo:hover .title_circle {
@@ -159,8 +159,8 @@ figure.effect-romeo figcaption::after {
 	content: '';
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%,-50%,0em);
+	transform: translate3d(-50%,-50%,0em);
   margin-top: -1.7em;
 }
 

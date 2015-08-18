@@ -6,18 +6,20 @@
 /*
   This is the CSS for the profiles page.
 */
+
 body {
-  /* background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */
-  /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
-  /* background: -webkit-radial-gradient(radial-gradient (#cdeb8e 25%, #a5c956 50%); /* Chrome10+,Safari5.1+ */
-  /* background: -o-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* Opera 12+ */
-  /* background: -ms-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* IE10+ */
-  background: linear-gradient(#F2F2BE 25%, #08565A 90%); /* W3C */
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: auto;
+/* background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */
+/* background: -webkit-gradient(radial, center center, 0em, center center, 100%, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+/* background: -webkit-radial-gradient(radial-gradient (#cdeb8e 25%, #a5c956 50%); /* Chrome10+,Safari5.1+ */
+/* background: -o-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* Opera 12+ */
+/* background: -ms-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* IE10+ */
+background: linear-gradient(#F2F2BE 25%, #08565A 90%); /* W3C */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: auto;
 }
+
   /* This is to modify the appearance of the header   */
 
 h1 {
@@ -54,23 +56,23 @@ a:active {
 /* This is the CSS for the pre-set avatar images. */
 
 .avatar_mini {
-  height: 150px;
-  width: 150px;
+  height: 11.538em;
+  width: 11.538em;
 }
 
 .avatar_profile {
-  height: 256px;
-  width: 256px;
+  height: 19.692em;
+  width: 19.692em;
 }
 
 .avatar_index {
-  height: 150px;
-  width: 150px;
+  height: 11.538em;
+  width: 11.538em;
 }
 
 .avatar_image {
-  width: 150px;
-  height: 150px;
+  width: 11.538em;
+  height: 11.538em;
   float: left;
 }
 
@@ -82,24 +84,26 @@ a:active {
   pre-set avatars are contained.   */
 
 .avatar_image_selector {
-  height: 160px;
-  width: 677px;
-  margin: 0px auto 0px;
-  /*border: 1px solid;*/
+  height: 12.308em;
+  width: 52.077em;
+  /*margin: 0em auto 0em auto;*/
+  /*border: 0.077em solid;*/
   white-space: nowrap;
   text-align: start;
   /*background: white;*/
   overflow-x: scroll;
-  padding: 10px;
+  padding: 0.769em;
 
 }
 
 /* This is the text box for the 'About Me' under Profile.  */
 
 #profile_about_me {
-  width: 550px;
-  height: 100px;
+  width: 28.206em;
+  height: 5.129em;
   font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -109,13 +113,13 @@ yellow upon selection. */
 
 .scroll ::-webkit-scrollbar {
   -webkit-appearance: none;
-  width: 7px;
-  height: 5px;
+  width: 0.538em;
+  height: 0.385em;
 }
 .scroll ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+  border-radius: 0.308em;
   background-color: rgba(0, 0, 0, .5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 0.077em rgba(255, 255, 255, .5);
 }
 
 .selected {

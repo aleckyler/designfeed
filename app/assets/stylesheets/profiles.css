@@ -92,7 +92,7 @@ a:active {
   text-align: start;
   /*background: white;*/
   overflow-x: scroll;
-  padding: 0.769em;
+  padding-bottom: 0.769em;
 
 }
 
@@ -124,4 +124,8 @@ yellow upon selection. */
 
 .selected {
   background: yellow;
+}
+
+.scroll {
+  width: 52.077em !important;
 }

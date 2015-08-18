@@ -92,10 +92,19 @@
         </div>
       </div>
     <% end %>
-
+<%= p response.id %>
     <p class="timestamp">Added on: <%= response.created_at %></p>
+    <% if response.user_id == current_user.id %>
+      <%= link_to 'Edit', edit_response_path(response) %> |
+      <%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+
   </div>
 <% end %>
 
-<%= link_to 'Edit', edit_submission_path(@submission) %> |
-<%= link_to 'Submission', :back %>
+
+<% if @submission.user_id == current_user.id %>
+  <%= link_to 'Edit', edit_submission_path(@submission) %> |
+  <%= link_to 'Destroy', @submission, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
+<%= link_to 'Back to Submissions', :back %>

@@ -41,7 +41,7 @@ h1 {
 
 .nav_bar a {
     font-family: 'Megrim', sans-serif;
-    font-size: 1em;
+    font-size: 13px;
 }
 .nav_bar ul li a {
   background: none;
@@ -72,7 +72,7 @@ h1 {
 .nav_bar ul li {
     color: white;
     font-family: 'Megrim', sans-serif;
-    font-size: 1.5em;
+    font-size: 19.5px;
     text-transform: uppercase;
     font-weight: bold;
     display: inline-block;
@@ -146,7 +146,7 @@ body>.nav_bar>.nav_bar1>ul>li:hover .nav_bar {
 
 a {
   font-family: 'Unica One', cursive;
-  font-size: 1em;
+  font-size: 13px;
 }
 
 

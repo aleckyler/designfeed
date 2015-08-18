@@ -21,9 +21,9 @@ div.title_circle {
   border-radius: 40em;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   /*background-color: rgba(45, 44, 44, 0.9);*/
-  /*background: -webkit-radial-gradient(circle, grey, black); /* Safari */
-  /*background: -o-radial-gradient(circle, grey, black); /* Opera 11.6 to 12.0 */
-  /*background: -moz-radial-gradient(circle, grey, black); /* Firefox 3.6 to 15 */
+  background: -webkit-radial-gradient(circle, grey, black); /* Safari */
+  background: -o-radial-gradient(circle, grey, black); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, grey, black); /* Firefox 3.6 to 15 */
   background: radial-gradient(circle, grey, black); /* Standard syntax */
 }
 

@@ -80,6 +80,9 @@ a:active {
   display: inline-block;
 }
 
+  /* This is the horizontal box where the
+  pre-set avatars are contained.   */
+
 .avatar_image_selector {
   height: 160px;
   width: 677px;

@@ -174,6 +174,7 @@ a:active {
     text-decoration: none;
 }
 
+/* This modifies the 'Upload Your Avatar Here' link text   */
 
 .here_link:link, .here_link:visited {
   color: brown;
@@ -190,6 +191,7 @@ a:active {
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 /*this is for index submission*/
 .submission_box a {
     color: black;
@@ -210,6 +212,40 @@ a:active {
 .sub_left {
     width: 80%;
     float: left;
+=======
+/*  Button customization   */
+
+.button {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: 'Unica One', Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+
+/* This modifies the "DesignFeed, Wyncode Project" sentence
+at the bottom (footer text) */
+
+p.footer {
+  color: black;
+  font-family: 'Unica One', sans-serif;
+  font-size: 1.5em;
+  padding-top: 2em;
+>>>>>>> e34b83142dac0ee0fff9d222dd7bbc1fa9813155
 }
 .submission_title {
     float: left;

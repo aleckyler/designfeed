@@ -72,6 +72,8 @@ div.title {
 	opacity: 0.8;
 }
 
+/* This modifies the short sentences in the circular logo.  */
+
 .grid figure figcaption {
 	padding-top: 2em;
 	color: #fff;
@@ -120,8 +122,9 @@ div.title {
 }
 
 .grid figure p {
+  font-family: 'Unica One', sans-serif;
 	letter-spacing: 1px;
-	font-size: 68.5%;
+	font-size: 105%;
 }
 
 /*romeo*/
@@ -185,7 +188,7 @@ figure.effect-romeo p {
 
 figure.effect-romeo p {
   visibility: hidden;
-  padding-top: 6em;
+  padding-top: 5em;
 }
 
 figure.effect-romeo .title {

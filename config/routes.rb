@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   resources :profiles
   get 'responses', to: 'responses#index'
   post 'responses', to: 'responses#create'
+  get 'responses/:id/edit', to: 'responses#edit', as: :edit_response
+  get 'response/:id', to: 'responses#show', as: :response
+  patch 'response/:id', to: 'responses#update'
+  put 'response/:id', to: 'responses#update'
+  delete 'response/:id', to: 'responses#destroy'
   resources :uploads
 
   # The priority is based upon order of creation: first created -> highest priority.

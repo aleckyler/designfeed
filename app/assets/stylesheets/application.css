@@ -14,13 +14,14 @@
  *= require_self
  */
 
+body {
+ font-family: 'Unica One', cursive;
+ }
+
 h1 {
   /*padding-top: .5em;*/
 }
 
-body {
-  font-family: 'Unica One', cursive;
-}
 .nav_bar {
   position: fixed;
   /*height: 53px;*/
@@ -186,6 +187,7 @@ a:active {
 }
 
 /* Selected link */
+
 .here_link:active {
     color: green;
     text-decoration: none;

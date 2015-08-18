@@ -191,8 +191,28 @@ a:active {
     text-decoration: none;
 }
 
-/*  Button customization. This isn't working at the moment.
-  WTF */
+/*this is for index submission*/
+.submission_box a {
+    color: black;
+}
+.submission_box {
+    margin: 5px auto;
+    height: 100px;
+    width: 900px;
+    padding: 12px;
+    border-radius: 5px;
+    -moz-box-shadow: inset 0 0 10px 10px rgba(0,0,0, 0.5);
+    box-shadow: inset 0 0 10px 10px rgba(0,0,0, 0.5);
+}
+.sub_right {
+    width: 20%;
+    float: right;
+}
+.sub_left {
+    width: 80%;
+    float: left;
+
+/*  Button customization   */
 
 .button {
   background: #000000;
@@ -225,4 +245,14 @@ p.footer {
   font-size: 1.5em;
   text-align: center;
   padding: 1.5em;
+  padding-top: 2em;
+}
+.submission_title {
+    float: left;
+    margin-bottom: 5px;
+}
+.submission_entry  {
+    clear: both;
+    float: left;
+    text-align: justify;
 }

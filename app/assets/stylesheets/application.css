@@ -174,7 +174,7 @@ a:active {
     text-decoration: none;
 }
 
-/* This modifies the 'Upload Your Avatar Here' link text   */
+/* This modifies the 'Upload Your Avatar Here' link   */
 
 .here_link:link, .here_link:visited {
   color: brown;
@@ -185,13 +185,14 @@ a:active {
     text-decoration: none;
 }
 
-/* selected link */
+/* Selected link */
 .here_link:active {
     color: green;
     text-decoration: none;
 }
 
-/*  Button customization   */
+/*  Button customization. This isn't working at the moment.
+  WTF */
 
 .button {
   background: #000000;
@@ -222,5 +223,6 @@ p.footer {
   color: black;
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
-  padding-top: 2em;
+  text-align: center;
+  padding: 1.5em;
 }

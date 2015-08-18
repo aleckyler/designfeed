@@ -21,7 +21,6 @@ body {
 }
 
 .title {
-
   margin-bottom: 30px;
 }
 
@@ -155,6 +154,68 @@ h1 {
   color: black
 }
 
-.footer {
-  color: black;
+/*this is for index submission*/
+.submission_box a {
+    color: black;
+}
+.submission_box {
+    margin: 10px auto;
+    height: 100px;
+    width: 900px;
+    padding: 12px;
+    border-radius: 5px;
+    -moz-box-shadow: inset 0 0 10px 10px rgba(0,0,0, 0.5);
+    box-shadow: inset 0 0 10px 10px rgba(0,0,0, 0.5);
+}
+.sub_right {
+    width: 20%;
+    float: right;
+    height: 100px;
+}
+
+.sub_left {
+    width: 80%;
+    float: left;
+    height: 100px;
+}
+
+.submission_box a:link {
+    color: black;
+}
+
+.submission_title {
+    float: left;
+    height: 20px;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+.submission_title h3 {
+  font-size: 1.7em;
+}
+
+.submission_entry  {
+    clear: both;
+    float: left;
+    text-align: left;
+    height: 48px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.sub_resp_count {
+  float: right;
+  clear: both;
+  /*position: relative;*/
+  /*top: 82px;*/
+  /*bottom: 0px;
+  right: 0px;*/
+  height: 18px;
+  width: 100px;
+  text-align: right;
+}
+
+.avatar_submissions {
+  height: 60px;
+  width: 60px;
 }

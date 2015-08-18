@@ -15,7 +15,7 @@
             <h3><%= submission.title %></h3>
           </div>
           <div class="submission_entry">
-            <%= submission.entry.truncate(330) %>
+            <%= submission.entry.truncate(320) %>
           </div>
           <div class="sub_resp_count">
             <%= Response.where(submission_id: submission.id).count %> responses

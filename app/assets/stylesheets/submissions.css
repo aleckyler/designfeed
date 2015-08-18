@@ -202,7 +202,7 @@ h1 {
     float: left;
     height: 20px;
     margin: 5px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .submission_title h3 {
@@ -214,8 +214,10 @@ h1 {
     float: left;
     text-align: left;
     height: 48px;
-    margin-left: 20px;
-    margin-right: 10px;
+    margin-left: 25px;
+    margin-right: 15px;
+    font-size: 1.2em;
+    font-weight: normal;
 }
 
 .sub_resp_count {

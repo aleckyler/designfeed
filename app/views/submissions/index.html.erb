@@ -12,10 +12,10 @@
       <%= link_to(submission) do %>
         <div class="sub_left">
           <div class="submission_title">
-            <h3><%= submission.title %></h3>
+            <h3><%= submission.title.truncate(56) %></h3>
           </div>
           <div class="submission_entry">
-            <%= submission.entry.truncate(320) %>
+            <%= submission.entry.truncate(260) %>
           </div>
           <div class="sub_resp_count">
             <%= Response.where(submission_id: submission.id).count %> responses

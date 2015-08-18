@@ -21,16 +21,26 @@
 
 
     <div class="nav_bar1">
-      <ul><li class="home"><%= link_to 'Home', welcome_index_path %></li>
-        <li class="user_profiles"><%= link_to 'User Profiles', profiles_path %></li>
+      <ul> <%= link_to(welcome_index_path) do %>
+          <li class="home">Home</li>
+        <% end %>
+        <%= link_to(profiles_path) do %>
+          <li class="user_profiles">User Profiles</li>
+        <% end %>
         <li class="submissions">
           Submissions
           <ul>
-            <li><%= link_to 'Create a New Submission', new_submission_path %></li>
-            <li><%= link_to 'View All Submissions', submissions_path %></li>
+            <%= link_to(new_submission_path) do %>
+              <li>Create a New Submission</li>
+            <% end %>
+            <%= link_to(submissions_path) do %>
+              <li>View All Submissions</li>
+            <% end %>
           </ul>
         </li>
-        <li class="faq"><%= link_to "FAQ", faq_index_path %></li>
+        <%= link_to(faq_index_path) do %>
+          <li class="faq"><%= link_to "FAQ", faq_index_path %></li>
+        <% end %>
       </ul>
 
     </div>
@@ -41,15 +51,25 @@
         <li>
           <%= Profile.where(user_id: current_user.id).first.username %>
           <ul>
-            <li><%= link_to "View My Profile", profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
-            <li><%= link_to "Edit My Profile", edit_profile_path(Profile.where(user_id: current_user.id).first.id) %></li>
-            <li class="sign_out"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+            <%= link_to(profile_path(Profile.where(user_id: current_user.id).first.id)) do %>
+              <li>View My Profile</li>
+            <% end %>
+            <%= link_to(edit_profile_path(Profile.where(user_id: current_user.id).first.id)) do %>
+              <li>Edit My Profile</li>
+            <% end %>
+            <%= link_to(destroy_user_session_path, :method => :delete) do %>
+              <li class="sign_out">Sign Out</li>
+            <% end %>
           </ul>
         </li>
       <% end %>
     <%else%>
-      <li><%= link_to "Sign Up", new_user_registration_path %></li>
-      <li><%= link_to "Sign In", new_user_session_path %></li>
+      <%= link_to(new_user_registration_path) do %>
+        <li>Sign Up</li>
+      <% end %>
+      <%= link_to(new_user_session_path) do %>
+        <li>Sign In</li>
+      <% end %>
     <% end %>
   </ul>
   </div>

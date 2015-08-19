@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   has_many :responses, dependent: :destroy
   has_many :profiles, dependent: :destroy
 
+
   def self.from_omniauth(auth)
-      # where(auth.s(:provider, :uid)).first_or_create do |user|
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
@@ -29,6 +29,6 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
-    super && provider.blank?  
+    super && provider.blank?
   end
 end

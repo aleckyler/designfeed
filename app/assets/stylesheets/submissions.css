@@ -5,7 +5,18 @@
 
 body {
   text-align: center;
+  font-family: 'Unica One', cursive;
   font-size: 13px;
+}
+
+#profile_username {
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
+  font-size: 1.25em;
+}
+
+#profile_about_me {
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
+  font-size: 1.5em;
 }
 
 .field, .code_input, .actions, .code_box {
@@ -175,9 +186,27 @@ h1 {
     width: 69.231em;
     padding: 1.154em;
     border-radius: 0.538em;
-    -moz-box-shadow: spread 0 0 0.192em rgba(0,0,0, 0.75);
-    box-shadow: spread 0 0 0.192em rgba(0,0,0, 0.75);
     background-color: white;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.submission_box:before, .submission_box:after
+{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 10px 5px rgba(0,0,0,0.8);
+  -moz-box-shadow:0 0 10px 5px rgba(0,0,0,0.8);
+  box-shadow:0.4em 0.8em 0.75em 0.1em black;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  -moz-border-radius:100px / 1em;
+  border-radius:100px / 0.75em;
 }
 
 .sub_right {
@@ -199,11 +228,11 @@ h1 {
 }
 
 .sub_left:hover {
-  color: green !important;
+  color: #08565A !important;
 }
 
 .sub_right:hover {
-  color: blue !important;
+  color: #08565A !important;
 }
 
 .submission_title {

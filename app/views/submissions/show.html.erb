@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <div class="votes">
-  <%= link_to 'upvote', new_upvote_path(@submission) %>
-  <%= link_to 'downvote', new_downvote_path(@submission) %>
+  <% if user_signed_in? %>
+    <%= link_to 'upvote', new_upvote_path(@submission) %>
+    <%= link_to 'downvote', new_downvote_path(@submission) %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %> to vote!
+  <% end %>
   <h3><%= pluralize @submission.vote_count, 'vote' %></h3>
 </div>
 
@@ -47,7 +51,11 @@
 <div class="comment">
   <h3 class="new_response_head">New Response</h3>
 </div>
-<%= render 'responses/form' %>
+<% if user_signed_in? %>
+  <%= render 'responses/form' %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %> to add a response!
+<% end %>
 
 <h3>Responses:</h3>
 
@@ -99,17 +107,20 @@
       </div>
     <% end %>
     <p class="timestamp">Added on: <%= response.created_at %></p>
-    <% if response.user_id == current_user.id %>
-      <%= link_to 'Edit', edit_response_path(response) %> |
-      <%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if user_signed_in? %>
+      <% if response.user_id == current_user.id %>
+        <%= link_to 'Edit', edit_response_path(response) %> |
+        <%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
     <% end %>
 
   </div>
 <% end %>
 
-
-<% if @submission.user_id == current_user.id %>
-  <%= link_to 'Edit', edit_submission_path(@submission) %> |
-  <%= link_to 'Destroy', @submission, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% if user_signed_in? %>
+  <% if @submission.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_submission_path(@submission) %> |
+    <%= link_to 'Destroy', @submission, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <% end %>
 <% end %>
 <%= link_to 'Back to Submissions', :back %>

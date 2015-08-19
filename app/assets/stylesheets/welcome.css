@@ -156,7 +156,7 @@ figure.effect-romeo figcaption::after {
 	left: 50%;
 	width: 80%;
 	height: 0.062em;
-	background: #fff;
+	background: rgb(200, 227, 134);
 	content: '';
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;

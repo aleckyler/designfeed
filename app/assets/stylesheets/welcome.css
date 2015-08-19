@@ -6,12 +6,19 @@
 /* This is to modify the appearance of the 'DesignFeed' title
 as well as the circular border around the title */
 
-/*body {
-  background: linear-gradient(#CFEBA1, yellow);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: auto;
-}*/
+.welcome_bg {
+/* background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */
+/* background: -webkit-gradient(radial, center center, 0em, center center, 100%, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+/* background: -webkit-radial-gradient(radial-gradient (#cdeb8e 25%, #a5c956 50%); /* Chrome10+,Safari5.1+ */
+/* background: -o-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* Opera 12+ */
+/* background: -ms-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* IE10+ */
+background: linear-gradient(#F2F2BE 25%, #08565A 90%); /* W3C */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: auto;
+font-family: 'Unica One', cursive;
+}
 
 div.title_circle {
   width: 36em;

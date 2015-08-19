@@ -54,8 +54,15 @@ body {
   margin: 0em auto 4.55em;
   width: 27.273em;
   height: 27.273em;
+  padding: 0.6153846153846154em;
 }
 
+#submission_html, #submission_css {
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
+  font-size: 1.25em;
+  width: 17.23076923076923em;
+  height: 17.23076923076923em;
+}
 /* The HTML and CSS text field boxes on sub page */
 .html_field, .css_field {
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;

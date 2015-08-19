@@ -9,7 +9,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<body class="overall_bg">
+
 <% if (user_signed_in?) && (Profile.where(user_id: current_user.id).length == 0) %>
   <h2>You must create a profile.</h2>
   <% @profile = current_user.profiles.build %>

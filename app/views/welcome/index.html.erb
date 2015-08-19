@@ -1,3 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DesignFeed</title>
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="welcome_bg">
+
+<% if (user_signed_in?) && (Profile.where(user_id: current_user.id).length == 0) %>
+  <h2>You must create a profile.</h2>
+  <% @profile = current_user.profiles.build %>
+  <%= render 'profiles/form', collection: @profile %>
+<% else %>
+
+    <p class="alert"><%= alert %></p>
+
+<div class="nav_bar">
+
+
+    <div class="nav_bar1">
+      <ul> <%= link_to(welcome_index_path) do %>
+          <li class="home">Home</li>
+        <% end %>
+        <%= link_to(profiles_path) do %>
+          <li class="user_profiles">User Profiles</li>
+        <% end %>
+        <li class="submissions">
+          Submissions
+          <ul>
+            <%= link_to(new_submission_path) do %>
+              <li>Create a New Submission</li>
+            <% end %>
+            <%= link_to(submissions_path) do %>
+              <li>View All Submissions</li>
+            <% end %>
+          </ul>
+        </li>
+        <%= link_to(faq_index_path) do %>
+          <li class="faq">FAQ</li>
+        <% end %>
+      </ul>
+
+    </div>
+    <div class="nav_bar2 user_link">
+    <ul>
+    <% if user_signed_in? %>
+      <% if Profile.where(user_id: current_user.id).length != 0 %>
+        <li>
+          <%= Profile.where(user_id: current_user.id).first.username %>
+          <ul>
+            <%= link_to(profile_path(Profile.where(user_id: current_user.id).first.id)) do %>
+              <li>View My Profile</li>
+            <% end %>
+            <%= link_to(edit_profile_path(Profile.where(user_id: current_user.id).first.id)) do %>
+              <li>Edit My Profile</li>
+            <% end %>
+            <%= link_to(destroy_user_session_path, :method => :delete) do %>
+              <li class="sign_out">Sign Out</li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    <%else%>
+      <%= link_to(new_user_registration_path) do %>
+        <li>Sign Up</li>
+      <% end %>
+      <%= link_to(new_user_session_path) do %>
+        <li>Sign In</li>
+      <% end %>
+    <% end %>
+  </ul>
+  </div>
+  </div>
+    <div class="nav_bar_space">
+
+    </div>
+
+<% end %>
+
 <p id="notice"><%= notice %></p>
 <div class="title_container">
   <div class="grid">
@@ -18,5 +103,10 @@
   </div>
 </div>
 
+<p class="footer">
+  DesignFeed, A Wyncode Project
+</p>
 <br>
 <br>
+</body>
+</html>

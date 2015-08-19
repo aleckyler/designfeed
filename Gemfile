@@ -12,7 +12,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
   # gem 'sqlite3'
   # gem 'mysql2'
 # end
-
+gem 'omniauth'
+gem 'omniauth-github'
 # group :production do
   # gem 'pg'
 # end

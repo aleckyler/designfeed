@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
 
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users, controllers: { registrations: "registrations" },
+                    controllers: {omniauth_callbacks: "omniauth_callbacks"}
   root 'welcome#index'
   resources :submissions do
     member do
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
 
   get 'submissions', to: 'submissions#index', page: 1
   get 'submissions/page/:page', to: 'submissions#index'
-  
+
   get 'profiles', to: 'profiles#index', page: 1
   get 'profiles/page/:page', to: 'profiles#index'
 

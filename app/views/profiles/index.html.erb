@@ -5,9 +5,10 @@
 
 
 <div class="profiles_container">
-      
+
       <% @profiles.each do |profile| %>
       <div class="profile_box">
+        <%=link_to(profile) do%>
       <%= profile.username %>
           <% if Upload.where(name: profile.user_id).count == 0 %>
             <% if profile.avatar == "" %>
@@ -19,7 +20,7 @@
           <img src="<%= Upload.where(name: profile.user_id).last.url %>" alt="<%= profile.username %>'s Profile Picture" class="avatar_index avatar_index_profiles">
           <% end %>
           <%= Submission.where(user_id: profile.user_id).count %> Submissions,<br> <%= Response.where(user_id: profile.user_id).count %> responses
-          <%= link_to 'Show', profile %>
+      <% end %>
       </div>
       <% end %>
 

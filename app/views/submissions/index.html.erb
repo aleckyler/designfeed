@@ -7,6 +7,9 @@
 
 
 <% @submissions.each do |submission| %>
+  <div class="voting_box">
+    <%= submission.vote_count %>
+  </div>
   <div class="submission_box">
     <%# link_to submission.title %>
     <%= link_to(submission) do %>

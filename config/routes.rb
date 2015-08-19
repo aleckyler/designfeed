@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :submissions do
     member do
       get 'new_submission'
+
     end
   end
   resources :profiles
@@ -24,9 +25,13 @@ Rails.application.routes.draw do
 
   get 'submissions', to: 'submissions#index', page: 1
   get 'submissions/page/:page', to: 'submissions#index'
-  
+
   get 'profiles', to: 'profiles#index', page: 1
   get 'profiles/page/:page', to: 'profiles#index'
+
+  get 'submissions/:submission_id/upvote', to: 'votes#upvote', as: :new_upvote
+  get 'submissions/:submission_id/downvote', to: 'votes#downvote', as: :new_downvote
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

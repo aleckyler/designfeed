@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div class="votes">
+  <%= link_to 'upvote', new_upvote_path(@submission) %>
+  <%= link_to 'downvote', new_downvote_path(@submission) %>
+  <h3><%= @submission.vote_count %></h3>
+</div>
+
 <div class="title_and_entry">
     <h2 class="title"><%= @submission.title %></h2>
 

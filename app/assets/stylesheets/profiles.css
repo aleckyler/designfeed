@@ -116,3 +116,19 @@ yellow upon selection. */
 .scroll {
   width: 52.077em !important;
 }
+
+/*section for display profile index*/
+
+.profiles_container {
+    text-align: center;
+}
+
+.profile_box {
+    width: 12em;
+    margin: 1em;
+    display: inline-block;
+}
+
+.avatar_index_profiles {
+    margin: 0.25em;
+}

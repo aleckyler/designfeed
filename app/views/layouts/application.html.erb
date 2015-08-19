@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body class="overall_bg">
+<body id="overall_bg">
 
 <% if (user_signed_in?) && (Profile.where(user_id: current_user.id).length == 0) %>
   <h2>You must create a profile.</h2>

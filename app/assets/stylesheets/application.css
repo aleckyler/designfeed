@@ -14,12 +14,17 @@
  *= require_self
  */
 
- .overall_bg {
-   background: linear-gradient(#CFEBA1, yellow);
+ #overall_bg {
+   /* background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */
+   /* background: -webkit-gradient(radial, center center, 0em, center center, 100%, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+   /* background: -webkit-radial-gradient(radial-gradient (#cdeb8e 25%, #a5c956 50%); /* Chrome10+,Safari5.1+ */
+   /* background: -o-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* Opera 12+ */
+   /* background: -ms-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%); /* IE10+ */
+   background: linear-gradient(#F2F2BE 25%, #08565A 90%); /* W3C */
+   /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
    background-attachment: fixed;
-   background-repeat: repeat;
+   background-repeat: no-repeat;
    background-size: auto;
-   /*background-image: url(1.png);*/
  }
 
 h1 {
@@ -217,7 +222,7 @@ input[type="submit"] {
 	border-radius:6px;
 	border:1px solid #dcdcdc;
 	display:inline-block;
-	color:#777777;
+	color: black;
 	font-family:'Unica One';
 	font-size:15px;
 	font-weight:bold;
@@ -226,6 +231,7 @@ input[type="submit"] {
 	text-shadow:0px 1px 0px #ffffff;
 }
 input[type="submit"]:hover {
+  color: #777777;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
 	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
 	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);

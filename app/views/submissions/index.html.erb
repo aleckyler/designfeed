@@ -8,7 +8,7 @@
 
 <% @submissions.each do |submission| %>
   <div class="voting_box">
-    <%= submission.vote_count %>
+    <%= pluralize submission.vote_count, 'vote' %>
   </div>
   <div class="submission_box">
     <%# link_to submission.title %>

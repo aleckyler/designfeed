@@ -22,6 +22,12 @@ Rails.application.routes.draw do
   delete 'response/:id', to: 'responses#destroy'
   resources :uploads
 
+  get 'submissions', to: 'submissions#index', page: 1
+  get 'submissions/page/:page', to: 'submissions#index'
+  
+  get 'profiles', to: 'profiles#index', page: 1
+  get 'profiles/page/:page', to: 'profiles#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

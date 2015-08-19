@@ -4,7 +4,14 @@ class SubmissionsController < ApplicationController
   # GET /submissions
   # GET /submissions.json
   def index
-    @submissions = Submission.all
+    @sub_page = (params[:page] || 1).to_i
+    @sub_per_page = 4
+    @sub_offset = (@sub_page - 1) * @sub_per_page
+    @submissions = Submission.
+      order(created_at: :desc).
+      limit(@sub_per_page).
+      offset(@sub_offset).
+      all
   end
 
   # GET /submissions/1

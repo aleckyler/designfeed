@@ -43,7 +43,7 @@ class ResponsesController < ApplicationController
   def update
     respond_to do |format|
       if @response.update(response_params)
-        format.html { redirect_to submission_path(Submission.where(id: @response.submission_id).first.id), notice: 'Response was successfully updated.' }
+        format.html { redirect_to "/submissions/#{Submission.where(id: @response.submission_id).first.id}/\#comment_#{@response.id}", notice: 'Response was successfully updated.' }
         format.json { render :show, status: :ok, location: @response }
       else
         format.html { render :edit }

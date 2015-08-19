@@ -95,6 +95,7 @@ h1 {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+
 }
 
 .nav_bar ul li:hover  {
@@ -116,7 +117,7 @@ body>.nav_bar>.nav_bar1>ul>li:hover .nav_bar {
 .nav_bar ul li ul {
   padding: 0;
   position: absolute;
-  top: 3.692em;
+  top: 3.6em;
   left: 0;
   width: inherit;
   -webkit-box-shadow: none;

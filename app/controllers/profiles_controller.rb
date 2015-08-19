@@ -5,7 +5,14 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+    @prof_page = (params[:page] || 1).to_i
+    @prof_per_page = 8
+    @prof_offset = (@prof_page - 1) * @prof_per_page
+    @profiles = Profile.
+      order(created_at: :desc).
+      limit(@prof_per_page).
+      offset(@prof_offset).
+      all
   end
 
   # GET /profiles/1

@@ -6,53 +6,68 @@
 
 
 
-  <% @submissions.each do |submission| %>
-    <div class="submission_box">
-      <%# link_to submission.title %>
-      <%= link_to(submission) do %>
-        <div class="sub_left">
-          <div class="submission_title">
-            <h3><%= submission.title.truncate(56) %></h3>
-          </div>
-          <div class="submission_entry">
-            <%= submission.entry.truncate(260) %>
-          </div>
-          <div class="sub_resp_count">
-            <%= Response.where(submission_id: submission.id).count %> responses
-          </div>
+<% @submissions.each do |submission| %>
+  <div class="submission_box">
+    <%# link_to submission.title %>
+    <%= link_to(submission) do %>
+      <div class="sub_left">
+        <div class="submission_title">
+          <h3><%= submission.title.truncate(56) %></h3>
         </div>
+        <div class="submission_entry">
+          <%= submission.entry.truncate(260) %>
+        </div>
+        <div class="sub_resp_count">
+          <%= Response.where(submission_id: submission.id).count %> responses
+        </div>
+      </div>
 
-      <% end %>
-      <%= link_to(profile_path(Profile.where(user_id: submission.user_id).first)) do %>
-        <div class="sub_right">
-          <h3>Posted By:</h3>
-          <% if Upload.where(name: submission.user_id).count == 0 %>
-            <% if Profile.where(user_id: submission.user_id).first.avatar == "" %>
-              <%= image_tag("11.png", alt: "#{Profile.where(user_id: submission.user_id).first.username}'s Default Avatar", class: "avatar_submissions") %>
-            <% else %>
-              <%= image_tag("#{Profile.where(user_id: submission.user_id).first.avatar}.png", alt: "#{Profile.where(user_id: submission.user_id).first.username}'s Avatar", class: "avatar_submissions") %>
-            <% end %>
+    <% end %>
+    <%= link_to(profile_path(Profile.where(user_id: submission.user_id).first)) do %>
+      <div class="sub_right">
+        <h3>Posted By:</h3>
+        <% if Upload.where(name: submission.user_id).count == 0 %>
+          <% if Profile.where(user_id: submission.user_id).first.avatar == "" %>
+            <%= image_tag("11.png", alt: "#{Profile.where(user_id: submission.user_id).first.username}'s Default Avatar", class: "avatar_submissions") %>
           <% else %>
-            <img src="<%= Upload.where(name: submission.user_id).last.url %>" alt="<%= Profile.where(user_id: submission.user_id).first.username %>'s Profile Picture" class="avatar_submissions">
+            <%= image_tag("#{Profile.where(user_id: submission.user_id).first.avatar}.png", alt: "#{Profile.where(user_id: submission.user_id).first.username}'s Avatar", class: "avatar_submissions") %>
           <% end %>
-          <br>
-          <div class="sub_username">
-            <%= Profile.where(user_id: submission.user_id).first.username %>
-          </div>
+        <% else %>
+          <img src="<%= Upload.where(name: submission.user_id).last.url %>" alt="<%= Profile.where(user_id: submission.user_id).first.username %>'s Profile Picture" class="avatar_submissions">
+        <% end %>
+        <br>
+        <div class="sub_username">
+          <%= Profile.where(user_id: submission.user_id).first.username %>
         </div>
-      <% end %>
+      </div>
+    <% end %>
 
-      <%# if Profile.avatar == "" %>
-        <%# image_tag("11.png", alt: "#{Profile.username}'s Default Avatar", class: "avatar_index") %>
-      <%# else %>
-        <%# image_tag("#{Profile.avatar}.png", alt: "#{Profile.username}'s Avatar", class: "avatar_index") %>
-      <%# end %>
+    <%# if Profile.avatar == "" %>
+      <%# image_tag("11.png", alt: "#{Profile.username}'s Default Avatar", class: "avatar_index") %>
+    <%# else %>
+      <%# image_tag("#{Profile.avatar}.png", alt: "#{Profile.username}'s Avatar", class: "avatar_index") %>
+    <%# end %>
 
-      <%# link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%# link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-    </div>
+  </div>
 
-  <% end %>
+<% end %>
 
+<br>
+
+<div class="page_nav">
+  <ul class="page_nav_list">
+    <% unless (@sub_page == 1) %>
+      <%= link_to 'Previous page', page: @sub_page - 1 %>
+    <% end %>
+    <% if (!(@sub_page == 1) && !((@sub_page * @sub_offset)>=(Submission.all.length))) %>
+    |
+    <% end %>
+    <% unless ((@sub_page * @sub_offset)>=(Submission.all.length)) %>
+      <%= link_to 'Next page', page: @sub_page + 1 %>
+    <% end %>
+  </ul>
+</div>
 <br>
 <%= link_to 'Create a New Submission', new_submission_path %>

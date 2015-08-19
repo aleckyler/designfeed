@@ -8,23 +8,22 @@
 */
 
 /* This is the CSS for the username container in Listing Profiles   */
-  #user_name a {
+  #user_name {
       color: white;
     	font-family: 'Unica One', serif;
       font-size: 1.8em;
       text-align: center;
       margin: auto;
-      margin-bottom: 0.5em;
+      margin-bottom: -0.35em;
       background-color: rgba(0, 0, 14, 0.6);
       border-radius: 3.5em;
       width: auto;
       padding: 0.5em;
   }
 
-    #user_name a:hover {
+    .profile_box:hover #user_name {
       color: #C8E386;
       text-decoration: none;
-      background-color: inherit;
     }
 
   /* This is the CSS for the submissions container in Listing Profiles   */
@@ -35,13 +34,14 @@
     font-size: 1.35em;
     text-align: center;
     margin: auto;
+    margin-top: -0.7em;
     background-color: rgba(0, 0, 14, 0.6);
     border-radius: 3.5em;
     width: auto;
     padding: 0.5em;
   }
 
-  #user_sub:hover {
+  .profile_box:hover #user_sub {
     color: #C8E386;
     text-decoration: none;
   }

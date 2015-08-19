@@ -8,8 +8,9 @@
 
       <% @profiles.each do |profile| %>
       <div class="profile_box">
-        <div id="user_name">
         <%=link_to(profile) do%>
+        <div id="user_name">
+
       <%= profile.username %></div>
           <% if Upload.where(name: profile.user_id).count == 0 %>
             <% if profile.avatar == "" %>

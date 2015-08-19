@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   has_many :submissions, dependent: :destroy
   has_many :responses, dependent: :destroy
   has_many :profiles, dependent: :destroy
+  has_many :votes, dependent: :destroy
 end

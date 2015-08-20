@@ -99,8 +99,11 @@ body {
 }
 
 .timestamp {
+  font-family: 'Unica One', sans-serif;
+  font-size: 0.95em;
   text-align: right;
   margin-top: 0em;
+  margin-bottom: 0;
 }
 
 .comment {
@@ -117,16 +120,33 @@ body {
   font-weight: bold;
   border-radius: 3.5em;
   width: 50em;
-  padding: 1.25em 1em;
+  padding: 1.3em 1.7em;
   margin: auto 1.5em 1.3em;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.timestamp p {
-  font-size: 2em;
-  font-family: 'Unica One', sans-serif;
+#edit_options {
+  float: right;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.show_sections a {
+  color: red;
+}
+
+.show_sections a:link {
+  color: red;
+}
+
+.show_sections a:visited {
+  color: red;
+}
+
+.show_sections a:hover{
+  color: green;
 }
 
 .code_field textarea {

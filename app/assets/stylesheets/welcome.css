@@ -132,20 +132,24 @@ div.title {
 
 figure.effect-romeo {
 	-webkit-perspective: 76.923em;
+  -moz-perspective: 76.923em;
 	perspective: 76.923em;
   /*margin-top: 4em;*/
 }
 
 figure.effect-romeo .title_circle {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  -moz-transition: opacity 0.35s, -moz-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,0,0em);
+  -moz-transform: translate3d(0,0,0em);
 	transform: translate3d(0,0,0em);
 }
 
 figure.effect-romeo:hover .title_circle {
 	opacity: 0.6;
 	-webkit-transform: translate3d(0,0,23.077em);
+  -moz-transform: translate3d(0,0,23.077em);
 	transform: translate3d(0,0,23.077em);
 }
 
@@ -159,8 +163,10 @@ figure.effect-romeo figcaption::after {
 	background: rgb(200, 227, 134);
 	content: '';
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  -moz-transition: opacity 0.35s, -moz-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-50%,-50%,0em);
+  -moz-transform: translate3d(-50%,-50%,0em);
 	transform: translate3d(-50%,-50%,0em);
   margin-top: -1.7em;
 }
@@ -168,12 +174,14 @@ figure.effect-romeo figcaption::after {
 figure.effect-romeo:hover figcaption::before {
 	opacity: 0.5;
 	-webkit-transform: translate3d(-50%,-50%,25em) rotate(45deg);
+  -moz-transform: translate3d(-50%,-50%,25em) rotate(45deg);
 	transform: translate3d(-50%,-50%,25em) rotate(45deg);
 }
 
 figure.effect-romeo:hover figcaption::after {
 	opacity: 0.5;
 	-webkit-transform: translate3d(-50%,-50%,25em) rotate(-45deg);
+  -moz-transform: translate3d(-50%,-50%,25em) rotate(-45deg);
 	transform: translate3d(-50%,-50%,25em) rotate(-45deg);
 }
 
@@ -184,6 +192,7 @@ figure.effect-romeo p {
 	left: 10%;
 	width: 80%;
 	-webkit-transition: -webkit-transform 0.35s;
+  -moz-transition: -moz-transform 0.35s;
 	transition: transform 0.35s;
 }
 
@@ -194,33 +203,38 @@ figure.effect-romeo p {
 
 figure.effect-romeo .title {
 	-webkit-transform: translate3d(0,0%,0);
+  -moz-transform: translate3d(0,0%,0);
 	transform: translate3d(0,0%,0);
 }
 
 /*figure.effect-romeo:hover .title {
 	-webkit-transform: translate3d(0,-100%,0) translate3d(0,50%,0);
+  -moz-transform: translate3d(0,-100%,0) translate3d(0,50%,0);
 	transform: translate3d(0,-100%,0) translate3d(0,50%,0);
 }*/
 
 figure.effect-romeo h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+  -moz-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
 }
 
 figure.effect-romeo p {
 	/*padding: 0.25em 2em;*/
 	-webkit-transform: translate3d(0,-55%,0) translate3d(0,50%,0);
+  -moz-transform: translate3d(0,-55%,0) translate3d(0,50%,0);
 	transform: translate3d(0,-55%,0) translate3d(0,50%,0);
 }
 
 figure.effect-romeo:hover h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+  -moz-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 }
 
 figure.effect-romeo:hover p {
   visibility: visible;
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+  -moz-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
-
 }

@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body id="welcome_bg">
+<body >
 
 <% if (user_signed_in?) && (Profile.where(user_id: current_user.id).length == 0) %>
   <h2>You must create a profile.</h2>
@@ -77,38 +77,41 @@
   </ul>
   </div>
   </div>
-    <div class="nav_bar_space">
 
-    </div>
 
 <% end %>
+<div id="welcome_bg">
+  <div class="nav_bar_space">
 
-<div class="welcome_notice">
-  <p id="notice"><%= notice %></p>
-</div>
-<div class="title_container">
-  <div class="grid">
-    <figure class="effect-romeo">
-      <div class="title_circle">
-
-      </div>
-
-      <figcaption>
-        <div class="title">Design<br>Feed</div>
-
-        <p>"Mission statement" goes here.
-        <br>Second sentence.
-        <br>Third sentence?</p>
-
-      </figcaption>
-    </figure>
   </div>
+  <div class="welcome_notice">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="title_container">
+    <div class="grid">
+      <figure class="effect-romeo">
+        <div class="title_circle">
+
+        </div>
+
+        <figcaption>
+          <div class="title">Design<br>Feed</div>
+
+          <p>"Mission statement" goes here.
+          <br>Second sentence.
+          <br>Third sentence?</p>
+
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <p class="footer">
+    DesignFeed, A Wyncode Project
+  </p>
+  <br>
+  <br>
 </div>
 
-<p class="footer">
-  DesignFeed, A Wyncode Project
-</p>
-<br>
-<br>
 </body>
 </html>

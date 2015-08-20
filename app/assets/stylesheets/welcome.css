@@ -8,8 +8,8 @@ as well as the circular border around the title */
 
 #welcome_bg {
   background-image: url(cube_bg.jpg);
-  background-attachment: fixed;
-  background-position: 50% -11.5em;
+  /*background-attachment: fixed;*/
+  background-position: 50% -13em;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -246,4 +246,8 @@ figure.effect-romeo:hover p {
 }
 .nav_bar_space {
   height: 3.846em;
+}
+
+#welcome_bg .footer {
+  color: white;
 }

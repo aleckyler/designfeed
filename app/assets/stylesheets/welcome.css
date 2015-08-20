@@ -44,7 +44,7 @@ div.title {
 
 .title_container {
     text-align: center;
-    margin-top: 4.308em;
+    margin-top: -1.3846153846153846em;
 }
 .grid {
     display: inline-block;
@@ -77,7 +77,7 @@ div.title {
 
 .grid figure figcaption {
 	padding-top: 2em;
-	color: #fff;
+	color: white;
 	/*text-transform: uppercase;*/
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
@@ -105,7 +105,7 @@ div.title {
 	text-indent: 200%;
 	white-space: nowrap;
 	font-size: 0em;
-	opacity: 0em;
+	/*opacity: 0em;*/
 }
 
 .grid figure h2 {
@@ -222,5 +222,12 @@ figure.effect-romeo:hover p {
   visibility: visible;
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+}
 
+.welcome_notice {
+  height: 4.460615384615385em;
+  width: 61.38461538461539em;
+}
+.nav_bar_space {
+  height: 3.846em;
 }

@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
 
-  devise_for :users, controllers: { registrations: "registrations" },
-                    controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: "omniauth_callbacks" } #,
+                    # controllers: {omniauth_callbacks: "omniauth_callbacks"}
   root 'welcome#index'
   resources :submissions do
     member do

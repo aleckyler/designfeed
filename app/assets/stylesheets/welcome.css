@@ -241,7 +241,8 @@ figure.effect-romeo:hover p {
 
 .welcome_notice {
   height: 4.460615384615385em;
-  width: 61.38461538461539em;
+  /*width: 61.38461538461539em;*/
+  text-align: center;
 }
 .nav_bar_space {
   height: 3.846em;

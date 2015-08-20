@@ -4,5 +4,5 @@ class Profile < ActiveRecord::Base
     length: { maximum: 13},
     format: { with: /\A[a-zA-Z_0-9]+\z/, message: "only allows letters, numbers, and underscores." }
   belongs_to :user
-  has_one :upload
+  has_one :upload, dependent: :destroy
 end

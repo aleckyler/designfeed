@@ -7,6 +7,7 @@ class UploadsController < ApplicationController
 
   def create
     # Make an object in your bucket for your upload
+    if params[:file].respond_to? :original_filename
     obj = S3_BUCKET.objects[params[:file].original_filename]
 
     # Upload the file
@@ -28,6 +29,14 @@ class UploadsController < ApplicationController
       flash.now[:notice] = 'There was an error'
       render :new
     end
+  else
+    if @upload.respond_to? :save
+
+    else
+      redirect_to new_upload_path, notice: 'You must add a file to upload'
+      # flash.now[:notice] = 'There was an error'
+    end
+  end
   end
 
   def index

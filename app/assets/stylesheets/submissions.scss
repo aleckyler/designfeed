@@ -9,6 +9,11 @@ body {
   font-size: 13px;
 }
 
+/*h3 {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}*/
+
 #profile_username {
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
   font-size: 1.25em;
@@ -106,7 +111,22 @@ body {
 }
 
 .show_sections {
-  margin-bottom: 3.846em;
+  color: black;
+  background-color: white;
+  font-size: 1.35em;
+  font-weight: bold;
+  border-radius: 3.5em;
+  width: 50em;
+  padding: 1.25em 1em;
+  margin: auto 1.5em 1.3em;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.timestamp p {
+  font-size: 2em;
+  font-family: 'Unica One', sans-serif;
 }
 
 .code_field textarea {
@@ -114,6 +134,14 @@ body {
   width: 27.273em;
   height: 27.273em;
   padding: 0.6153846153846154em;
+}
+
+#response_comment {
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
+  font-size: 1.3em;
+  margin: auto;
+  width: 35em;
+  height: 10em;
 }
 
 #submission_html, #submission_css {
@@ -164,14 +192,10 @@ h1 {
 /* For the show code options in displaying the comments*/
 
 .more {
-  /*background: rgba(255,255,255,0.1);*/
-  /*border-bottom: 0.077em solid rgba(0,0,0,0.25);
-  border-top: 0.077em solid rgba(255,255,255,0.1);*/
-  /*box-shadow: 0 0.154em 0.769em rgba(0,0,0,0.1);*/
   margin: 0 auto 0;
   padding: 0.154em 1.154em;
   width: 47.692em;
-  /*position: relative;*/
+  position: relative;
 }
 
 .comment_code {
@@ -221,7 +245,7 @@ h1 {
 }
 
 .here_link {
-  color: black
+  color: black;
 }
 
 /* this is for index submission */

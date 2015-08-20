@@ -9,7 +9,7 @@ as well as the circular border around the title */
 #welcome_bg {
   background-image: url(cube_bg.jpg);
   background-attachment: fixed;
-  background-position: center;
+  background-position: 50% -11.5em;
   background-repeat: no-repeat;
   background-size: auto;
 }

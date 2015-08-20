@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+
  */
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
  #overall_bg {
    /* background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */

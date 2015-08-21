@@ -35,13 +35,13 @@
 <div class="page_nav">
   <ul class="page_nav_list">
     <% unless (@prof_page == 1) %>
-      <%= link_to 'Previous page', page: @prof_page - 1 %>
+      <%= link_to 'Previous page', {page: (@prof_page - 1)}, class: "profile_li" %>
     <% end %>
     <% if (!(@prof_page == 1) && !((@prof_page * @prof_offset)>=(Profile.all.length))) %>
     |
     <% end %>
     <% unless ((@prof_page * @prof_offset)>=(Profile.all.length)) %>
-      <%= link_to 'Next page', page: @prof_page + 1 %>
+      <%= link_to 'Next page', {page: (@prof_page + 1)}, class: "profile_li" %>
     <% end %>
   </ul>
 </div>

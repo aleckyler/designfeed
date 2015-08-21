@@ -208,6 +208,7 @@ a:active {
 
 /*  Button customization   */
 
+
 input[type="submit"] {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -248,7 +249,9 @@ input[type="submit"]:active {
 	position:relative;
 	top:1px;
 }
-
+input.sign_in_out {
+    width: 11.2em;
+}
 
 /* This modifies the "DesignFeed, Wyncode Project" sentence
 at the bottom (footer text) */

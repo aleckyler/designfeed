@@ -3,13 +3,12 @@
   They will automatically be included in application.css.
 */
 
-h2, p {
+h2 {
   font-family: 'Unica One', serif;
   font-size: 3em;
   margin: 1.538em 0;
   line-height: normal;
 }
-
 h1 {
   font-family: 'Unica One', serif;
   font-size: 5em;

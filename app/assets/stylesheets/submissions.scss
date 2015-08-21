@@ -9,10 +9,10 @@ body {
   font-size: 13px;
 }
 
-/*h3 {
-  padding-bottom: 1em;
-  padding-top: 1em;
-}*/
+// h3 {
+//   padding-bottom: 1em;
+//   padding-top: 1em;
+// }
 
 #profile_username {
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
@@ -51,7 +51,7 @@ body {
 }
 .sub_title h2 {
   font-size: 3em;
-  /*text-align: center;*/
+  //text-align: center;//
   padding: 0.3em;
   padding-left: 0em;
   margin: 0em auto;
@@ -69,8 +69,8 @@ body {
 
 .vote_btn ::before, .vote_btn ::after {
   font-size: 2.3em;
-  // text-align: center;
-  /*display: inline-block;*/
+  // text-align: center; //
+  // display: inline-block;//
 }
 .vote_btn {
   margin-top: 0.2em;
@@ -101,7 +101,7 @@ body {
   text-align: start;
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
   font-size: 1.1em;
-  // text-align: left;
+  // text-align: left; //
   padding-left: 1.75em;
   padding-right: 1.75em;
   margin-top: 2em;
@@ -203,7 +203,7 @@ body {
   width: 17.23076923076923em;
   height: 17.23076923076923em;
 }
-/* The HTML and CSS text field boxes on sub page */
+// The HTML and CSS text field boxes on sub page //
 .html_field, .css_field {
   font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
   font-size: 1.4em;
@@ -231,7 +231,7 @@ body {
   clear: both;
 }
 
-  /* This modifies the appearance of the header 'New Submission'  */
+  // This modifies the appearance of the header 'New Submission'  //
 
 h1 {
   font-family: 'Unica One', cursive;
@@ -242,7 +242,7 @@ h1 {
 }
 
 
-/* For the show code options in displaying the comments*/
+// For the show code options in displaying the comments//
 
 .more {
   margin: 0 auto 0;
@@ -257,7 +257,7 @@ h1 {
 }
 
 .more-btn-container {
-  /*display: inline-block;*/
+  //display: inline-block;//
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -301,7 +301,7 @@ h1 {
   color: black;
 }
 
-/* this is for index submission */
+// This is for index submission //
 .submission_box a {
     color: black;
 }

@@ -87,10 +87,19 @@ body {
 
 .entry {
   clear: both;
+  white-space: pre-wrap;
+}
+
+.entry strong {
+  white-space: none;
 }
 
 .code_box {
   height: 24.615em;
+}
+
+.code_box strong {
+  font-size: 1.5em;
 }
 
 .iframe iframe {
@@ -121,7 +130,7 @@ body {
   border-radius: 3.5em;
   width: 50em;
   padding: 1.3em 1.7em;
-  margin: auto 1.5em 1.3em;
+  margin: 1.5em auto 1.3em;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -342,7 +351,7 @@ h1 {
     clear: both;
     float: left;
     text-align: left;
-    height: 3.692em;
+    height: 3em;
     margin-left: 1.923em;
     margin-right: 1.154em;
     font-size: 1.2em;
@@ -359,6 +368,7 @@ h1 {
   height: 1.385em;
   width: 7.692em;
   text-align: right;
+
 }
 
 .avatar_submissions {

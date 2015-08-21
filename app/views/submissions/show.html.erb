@@ -30,8 +30,8 @@
     </div>
 
   <p class="entry">
-    <strong>Entry:</strong>
-    <%= @submission.entry %>
+<strong>Entry:</strong><br>
+<%= @submission.entry %>
   </p>
 </div>
 
@@ -65,7 +65,9 @@
 
 </div>
 <div class="comment">
-  <h3 class="new_response_head">New Response</h3>
+  <br>
+  <h3 class="new_response_head">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    New Response</h3>
 </div>
 <% if user_signed_in? %>
   <%= render 'responses/form' %>
@@ -134,11 +136,15 @@
 
   </div>
 <% end %>
+<br>
+<br>
+<br>
+<br>
 
 <% if user_signed_in? %>
   <% if @submission.user_id == current_user.id %>
-    <%= link_to 'Edit', edit_submission_path(@submission) %> |
-    <%= link_to 'Destroy', @submission, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Edit', edit_submission_path(@submission), class: "profile_li" %> |
+    <%= link_to 'Destroy', @submission, method: :delete, data: { confirm: 'Are you sure?' }, class: "profile_li" %> |
   <% end %>
 <% end %>
-<%= link_to 'Back to Submissions', :back %>
+<%= link_to 'Back to Submissions', :back, class: "profile_li" %>

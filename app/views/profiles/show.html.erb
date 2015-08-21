@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @profile.username %>
+<p class="profile_title">
+  <strong><%= @profile.username %></strong>
 </p>
 
 <p>
@@ -23,34 +22,37 @@
   <% end %>
 
 </p>
+<div class="profile_show_lower">
+  <div class="profile_p about_me">
+    <strong>About me:</strong><br><br>
+    <%= @profile.about_me %>
+  </div><br>
 
-<p>
-  <strong>About me:</strong>
-  <%= @profile.about_me %>
-</p>
-
-<p>
-  <strong>My Submissions:</strong>
-</p>
-<% Submission.where(user_id: @profile.user_id).each do |submission| %>
-  <li><%= link_to "#{submission.title}", submission %></li>
-<% end %>
-<br>
-
-<p>
-  <strong>Submissions I have responded to:</strong>
-</p>
-<% array = [] %>
-<% Response.where(user_id: @profile.user_id).each do |response| %>
-  <% if !(array.include? response.submission_id) %>
-    <li><%= link_to "#{Submission.where(id: response.submission_id).first.title}", Submission.where(id: response.submission_id).first %></li>
-    <% array << response.submission_id %>
+  <p class="profile_p">
+    <strong>My Submissions:</strong>
+  </p>
+  <% Submission.where(user_id: @profile.user_id).each do |submission| %>
+    <li class="profile_li"><%= link_to "#{submission.title}", submission %></li>
   <% end %>
-<% end %>
+  <br><br>
+
+  <p class="profile_p">
+    <strong>Submissions I have responded to:</strong>
+  </p>
+  <% array = [] %>
+  <% Response.where(user_id: @profile.user_id).each do |response| %>
+    <% if !(array.include? response.submission_id) %>
+      <li class="profile_li"><%= link_to "#{Submission.where(id: response.submission_id).first.title}", Submission.where(id: response.submission_id).first %></li>
+      <% array << response.submission_id %>
+    <% end %>
+  <% end %>
+</div>
+
+<br>
 <br>
 <br>
 <br>
 <%# link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Profiles', profiles_path %> |
-<%= link_to 'Back', :back %>
+<%= link_to 'Edit', edit_profile_path(@profile), class: "profile_li" %> |
+<%= link_to 'Profiles', profiles_path, class: "profile_li" %> |
+<%= link_to 'Back', :back, class: "profile_li" %>

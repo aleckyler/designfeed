@@ -7,9 +7,7 @@
 
 
 <% @submissions.each do |submission| %>
-  <div class="voting_box">
-    <%= pluralize submission.vote_count, 'vote' %>
-  </div>
+
   <div class="submission_box">
     <%# link_to submission.title %>
     <%= link_to(submission) do %>
@@ -21,7 +19,8 @@
           <%= submission.entry.truncate(260) %>
         </div>
         <div class="sub_resp_count">
-          <%= Response.where(submission_id: submission.id).count %> responses
+          <%= pluralize submission.vote_count, 'vote' %><br>
+          <%= pluralize Response.where(submission_id: submission.id).count, 'response' %>
         </div>
       </div>
 
@@ -62,15 +61,15 @@
 <div class="page_nav">
   <ul class="page_nav_list">
     <% unless (@sub_page == 1) %>
-      <%= link_to 'Previous page', page: @sub_page - 1 %>
+      <%= link_to 'Previous page', {page: (@sub_page - 1)}, class: "profile_li" %>
     <% end %>
     <% if (!(@sub_page == 1) && !((@sub_page * @sub_offset)>=(Submission.all.length))) %>
     |
     <% end %>
     <% unless ((@sub_page * @sub_offset)>=(Submission.all.length)) %>
-      <%= link_to 'Next page', page: @sub_page + 1 %>
+      <%= link_to 'Next page', {page: (@sub_page + 1)}, class: "profile_li" %>
     <% end %>
   </ul>
 </div>
 <br>
-<%= link_to 'Create a New Submission', new_submission_path %>
+<%= link_to 'Create a New Submission', new_submission_path, class: "profile_li" %>

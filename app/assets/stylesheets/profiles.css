@@ -161,6 +161,7 @@ a:active {
 .avatar_index {
   height: 11.538em;
   width: 11.538em;
+  border-radius:11.538em;
 }
 
 .avatar_image {

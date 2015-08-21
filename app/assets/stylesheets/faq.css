@@ -3,6 +3,12 @@
   They will automatically be included in application.css.
 */
 
+p.faq_box {
+  font-family: 'Unica One', serif;
+  font-size: 3em;
+  border-radius:
+}
+
 h2 {
   font-family: 'Unica One', serif;
   font-size: 3em;

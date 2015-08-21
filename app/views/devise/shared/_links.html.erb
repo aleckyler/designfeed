@@ -4,7 +4,7 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= button_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn-auth btn-github" %><br />
+    <%= button_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider)%><br />
   <% end -%>
 <% end -%>
 

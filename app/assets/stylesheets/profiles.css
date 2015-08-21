@@ -34,10 +34,21 @@
 
 div.about_me {
   background: white;
-  border: 0.077em solid;
   white-space: pre-wrap;
   word-wrap: break-word;
   text-align: start;
+  border-radius: 3.5em;
+  width: auto;
+  padding: 1.3em 1.7em;
+  margin: 1.5em auto 1.3em;
+}
+
+div.profile_subs {
+  background: white;
+  border-radius: 3.5em;
+  width: auto;
+  padding: 2em 1.7em;
+  margin: 1.5em auto 1.3em;
 }
 
 /* This is the CSS for the username container in Listing Profiles   */
@@ -63,6 +74,7 @@ div.about_me {
   .profile_li a:hover, a.profile_li:hover{
     color: green;
   }
+
   #user_name {
       color: white;
     	font-family: 'Unica One', serif;

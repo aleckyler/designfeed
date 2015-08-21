@@ -17,6 +17,14 @@ h1 {
   line-height: normal;
 }
 
+.left-only h2 {
+  width: 100%;
+}
+
+.right-only h2 {
+  width: 100%;
+}
+
 h2 {
   background: black;
   color: white;

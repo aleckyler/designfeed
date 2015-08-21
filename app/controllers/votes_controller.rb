@@ -7,12 +7,12 @@ class VotesController < ApplicationController
     @vote.user = current_user
     @vote.up_or_down = true
     if @vote.save
-      redirect_to(submissions_path)
+      redirect_to(@submission)
     else
       @old_vote = Vote.find_by(user_id: current_user.id, submission_id: params[:submission_id])
       @old_vote.destroy
       @vote.save
-      redirect_to(submissions_path)
+      redirect_to(@submission)
     end
   end
 
@@ -23,12 +23,12 @@ class VotesController < ApplicationController
     @vote.user = current_user
     @vote.up_or_down = false
     if @vote.save
-      redirect_to(submissions_path)
+      redirect_to(@submission)
     else
       @old_vote = Vote.find_by(user_id: current_user.id, submission_id: params[:submission_id])
       @old_vote.destroy
       @vote.save
-      redirect_to(submissions_path)
+      redirect_to(@submission)
     end
   end
 end

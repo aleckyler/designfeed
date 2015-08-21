@@ -23,7 +23,19 @@
             </div>
           <% end %>
         </div>
-      <%# else %>
+      <% else %>
+      <div class="vote_btn_div">
+        <%= link_to(new_user_session_path) do %>
+          <div class="vote_btn">
+            <i class="fa fa-thumbs-o-up"></i>
+          </div>
+        <% end %>
+        <%= link_to(new_user_session_path) do %>
+          <div class="vote_btn">
+            <i class="fa fa-thumbs-o-down"></i>
+          </div>
+        <% end %>
+      </div>
         <!-- <%#= link_to "Sign up", new_user_registration_path %> or <%#= link_to "Sign in", new_user_session_path %> to vote! -->
       <% end %>
 

@@ -36,5 +36,10 @@
 </div>
 
 
-<%= link_to 'Edit', edit_submission_path(Submission.find(params[:id])) %> |
-<%= link_to 'Submissions', submissions_path %>
+<% if user_signed_in? %>
+  <% if Submission.find(params[:id]).user_id == current_user.id %>
+    <%= link_to 'Edit', edit_submission_path(Submission.find(params[:id])), class: "profile_li" %> |
+    <%= link_to 'Destroy', Submission.find(params[:id]), method: :delete, data: { confirm: 'Are you sure?' }, class: "profile_li" %> |
+  <% end %>
+<% end %>
+<%= link_to 'Back to Submissions', submissions_path, class: "profile_li" %>

@@ -24,8 +24,14 @@ body {
   font-size: 1.5em;
 }
 
-.field, .code_input, .actions, .code_box {
+.field, .actions, .code_box {
   /*margin-bottom: 0.769em;*/
+  width: 47.692em;
+  text-align: center;
+  margin: 0em auto 3.846em;
+}
+
+.code_input {
   width: 47.692em;
   text-align: center;
   margin: 0em auto 3.846em;
@@ -56,6 +62,7 @@ body {
   width: 25em;
   float: right;
   margin-top: 1em;
+  margin-bottom: 3em;
   font-size: 0.5em;
   display: inline-block;
 }
@@ -87,11 +94,23 @@ body {
 
 .entry {
   clear: both;
+  background: white;
+  border: 0.077em solid;
   white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: start;
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
+  font-size: 1.1em;
+  // text-align: left;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  margin-top: 2em;
 }
 
 .entry strong {
-  white-space: none;
+  white-space: normal;
+  font-size: 1.55em;
+  padding: -1em;
 }
 
 .code_box {
@@ -160,8 +179,8 @@ body {
 
 .code_field textarea {
   margin: 0em auto 4.55em;
-  width: 27.273em;
-  height: 27.273em;
+  width: 16.753em;
+  height: 16.753em;
   padding: 0.6153846153846154em;
 }
 
@@ -171,6 +190,11 @@ body {
   margin: auto;
   width: 35em;
   height: 10em;
+}
+
+#response_html, #response_css {
+  font-family: 'Ubuntu Mono', 'Lucida Console', sans-serif;
+  font-size: 1.3em;
 }
 
 #submission_html, #submission_css {

@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     @prof_page = (params[:page] || 1).to_i
-    @prof_per_page = 8
+    @prof_per_page = 12
     @prof_offset = (@prof_page - 1) * @prof_per_page
     @profiles = Profile.
       order(created_at: :desc).

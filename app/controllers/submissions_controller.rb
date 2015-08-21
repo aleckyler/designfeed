@@ -5,7 +5,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions.json
   def index
     @sub_page = (params[:page] || 1).to_i
-    @sub_per_page = 4
+    @sub_per_page = 10
     @sub_offset = (@sub_page - 1) * @sub_per_page
     @submissions = Submission.
       order(created_at: :desc).

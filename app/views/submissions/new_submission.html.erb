@@ -1,10 +1,31 @@
+<br>
 <p id="notice"><%= notice %></p>
+<br>
 <div class="title_and_entry">
-  <h2 class="title"><%= Submission.find(params[:id]).title %></h2>
+  <div class="sub_title">
+    <h2><%= Submission.find(params[:id]).title %></h2>
+  </div>
+  <div class="votes">
+    <div class="vote_count">
+      <h3><%= pluralize Submission.find(params[:id]).vote_count, 'vote' %></h3>
+    </div>
+    <div class="vote_btn_div">
+      <%= link_to new_upvote_path(Submission.find(params[:id]))  do %>
+        <div class="vote_btn">
+          <i class="fa fa-thumbs-o-up"></i>
+        </div>
+      <% end %>
+      <%= link_to new_downvote_path(Submission.find(params[:id]))  do %>
+        <div class="vote_btn">
+          <i class="fa fa-thumbs-o-down"></i>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
   <p class="entry">
-    <strong>Entry:</strong>
-    <%= Submission.find(params[:id]).entry %>
+<strong>Entry:</strong><br>
+<%= Submission.find(params[:id]).entry %>
   </p>
 </div>
 

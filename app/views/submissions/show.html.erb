@@ -10,35 +10,18 @@
       <div class="vote_count">
         <h3><%= pluralize @submission.vote_count, 'vote' %></h3>
       </div>
-      <% if user_signed_in? %>
-        <div class="vote_btn_div">
-          <%= link_to(new_upvote_path(@submission)) do %>
-            <div class="vote_btn">
-              <i class="fa fa-thumbs-o-up"></i>
-            </div>
-          <% end %>
-          <%= link_to(new_downvote_path(@submission)) do %>
-            <div class="vote_btn">
-              <i class="fa fa-thumbs-o-down"></i>
-            </div>
-          <% end %>
-        </div>
-      <% else %>
       <div class="vote_btn_div">
-        <%= link_to(new_user_session_path) do %>
+        <%= link_to new_upvote_path(@submission)  do %>
           <div class="vote_btn">
             <i class="fa fa-thumbs-o-up"></i>
           </div>
         <% end %>
-        <%= link_to(new_user_session_path) do %>
+        <%= link_to new_downvote_path(@submission)  do %>
           <div class="vote_btn">
             <i class="fa fa-thumbs-o-down"></i>
           </div>
         <% end %>
       </div>
-        <!-- <%#= link_to "Sign up", new_user_registration_path %> or <%#= link_to "Sign in", new_user_session_path %> to vote! -->
-      <% end %>
-
     </div>
 
   <p class="entry">

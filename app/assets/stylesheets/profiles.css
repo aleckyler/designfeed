@@ -59,16 +59,16 @@ div.profile_subs {
   }
 
   .profile_li a, a.profile_li {
-    color: red;
+    color: blue;
     font-size: 1.35em;
   }
 
   .profile_li a:link, a.profile_li:link {
-    color: red;
+    color: blue;
   }
 
   .profile_li a:visited, a.profile_li:visited {
-    color: red;
+    color: blue;
   }
 
   .profile_li a:hover, a.profile_li:hover{
@@ -190,6 +190,22 @@ a:active {
 
 }
 
+/* This modifies the 'Upload Your Avatar Here' text and link */
+
+.here_link:link, .here_link:visited {
+  color: brown;
+}
+.here_link:hover {
+    color: #2AB0ED;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.here_link:active {
+    color: green;
+    text-decoration: none;
+}
+
 /* This is the text box for the 'About Me' under Profile.  */
 
 #profile_about_me {
@@ -217,7 +233,8 @@ yellow upon selection. */
 }
 
 .selected {
-  background: yellow;
+  border: solid blue;
+  border-radius: 18px;
 }
 
 .scroll {

@@ -186,24 +186,6 @@ a:active {
     text-decoration: none;
 }
 
-// This modifies the 'Upload Your Avatar Here' link   //
-
-.here_link:link, .here_link:visited {
-  color: brown;
-}
-.here_link:hover {
-    color: #2AB0ED;
-    background-color: inherit;
-    text-decoration: none;
-}
-
-// Selected link //
-
-.here_link:active {
-    color: green;
-    text-decoration: none;
-}
-
 //  Button customization   //
 
 
@@ -248,7 +230,7 @@ input[type="submit"]:active {
 	top:1px;
 }
 
-// to sign with GitHub in the log in page
+// to sign with GitHub in the log-in page
 
 input.sign_in_out {
   width: 11.2em;

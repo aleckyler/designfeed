@@ -1,3 +1,37 @@
 // Place all the styles related to the Registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sign_up_box {
+  background-color: white;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.85em;
+  border-radius: 3.5em;
+  width: 33em;
+  padding: 1.3em 1.7em;
+  margin: 1.5em auto 1.3em;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.sign_in_box {
+  background-color: white;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.85em;
+  border-radius: 3.5em;
+  width: 33em;
+  padding: 1.3em 1.7em;
+  margin: 1.5em auto 1.3em;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.field {
+  margin: 0 100px;
+  color: blue
+}

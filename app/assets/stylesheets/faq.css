@@ -3,11 +3,11 @@
   They will automatically be included in application.css.
 */
 
-/*p.faq_box {
+p.faq_box {
   font-family: 'Unica One', serif;
   font-size: 3em;
   border-radius:
-}*/
+}
 
 h2 {
   font-family: 'Unica One', serif;
@@ -24,27 +24,23 @@ h1 {
 }
 
 h2 {
-  /*background: black;*/
+  background: black;
   color: white;
   padding: 15px 0;
   position: relative;
 }
 h2:before, h2:after {
   content: "";
-  /*background: black;*/
+  background: black;
   position: absolute;
   top: 0;
   bottom: 0;
 }
 
   /* First Bar */
-/*h2:nth-of-type(1), h2:nth-of-type(1):before, h2:nth-of-type(1):after {
-  background-color: inherit;
-}
+h2:nth-of-type(1), h2:nth-of-type(1):before, h2:nth-of-type(1):after { background: black; }
 
   /* Second Bar  */
-/*h2:nth-of-type(2), h2:nth-of-type(2):before, h2:nth-of-type(2):after {
-  background-color: inherit;
-}*/
+h2:nth-of-type(2), h2:nth-of-type(2):before, h2:nth-of-type(2):after { background: black; }
 
 /*h2:nth-of-type(3), h2:nth-of-type(3):before, h2:nth-of-type(3):after { background: #d1b935; }*/

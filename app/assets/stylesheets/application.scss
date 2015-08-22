@@ -21,7 +21,7 @@
    /* background: -webkit-linear-gradient(radial-gradient (#F2F2BE 25%, #08565A 90%); /* Chrome10+,Safari5.1+ */
    /* background: -o-linear-gradient(center, ellipse cover, #F2F2BE 25%, #08565A 90%); /* Opera 12+ */
    /* background: -ms-linear-gradient(center, ellipse cover, #F2F2BE 25%, #08565A 90%); /* IE10+ */
-   background: linear-gradient(#F2F2BE 25%, #08565A 90%); /* W3C */
+   background: linear-gradient(to left top, #A8DBA8, #79BD9A, #3B8686); /* W3C */
    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2BE', endColorstr='#08565A',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
    background-attachment: fixed;
    background-repeat: no-repeat;
@@ -32,6 +32,8 @@ h1 {
   /*padding-top: .5em;*/
 }
 
+// Nav Bar customization
+
 .nav_bar {
   position: fixed;
   top: 0em;
@@ -41,11 +43,6 @@ h1 {
   margin-right: -0.769em;
   padding-right: 0.769em;
   z-index: 1;
-  /*-webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;*/
 }
 
 .nav_bar a {
@@ -74,9 +71,6 @@ h1 {
   margin: 0;
   padding: 0em 0.308em 0em 0;
   list-style: none;
-  /*-webkit-box-shadow: 0 0 0.385em rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 0.385em rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 0.385em rgba(0, 0, 0, 0.15);*/
 }
 .nav_bar ul li {
     color: white;
@@ -88,7 +82,6 @@ h1 {
     margin-right: -0.385em;
     position: relative;
     padding: 0.769em 1.026em;
-    /* background: #fff; */
     cursor: pointer;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;

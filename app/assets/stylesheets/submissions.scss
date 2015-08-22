@@ -244,18 +244,18 @@ body {
   clear: both;
 }
 
-  // This modifies the appearance of the header 'New Submission'  //
+  // This modifies the appearance of all headers with h1 tags //
 
 h1 {
+  color: white;
   font-family: 'Unica One', cursive;
   font-size: 5.5em;
   font-weight: bold;
   text-align: center;
-  /*padding-top: 1em;*/
 }
 
 
-// For the show code options in displaying the comments//
+// For the show code options in displaying the comments //
 
 .more {
   margin: 0 auto 0;

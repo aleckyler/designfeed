@@ -59,20 +59,20 @@ div.profile_subs {
   }
 
   .profile_li a, a.profile_li {
-    color: blue;
+    color: white;
     font-size: 1.35em;
   }
 
   .profile_li a:link, a.profile_li:link {
-    color: blue;
+    color: white;
   }
 
   .profile_li a:visited, a.profile_li:visited {
-    color: blue;
+    color: white;
   }
 
   .profile_li a:hover, a.profile_li:hover{
-    color: green;
+    color: blue;
   }
 
   #user_name {

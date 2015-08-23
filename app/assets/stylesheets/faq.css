@@ -3,24 +3,14 @@
   They will automatically be included in application.css.
 */
 
-.faq_box {
-  font-family: 'Unica One', serif;
-  font-size: 3em;
-  text-align: center;
-  /*border: 3px solid black;*/
-  /*display: flex;*/
-}
-
-#faq_header {
-  color: white;
-  font-size: 1.5em;
-  line-height: normal;
-  padding-top: 0.55m;
-  padding-bottom: 0.65em;
-}
-
 .faq_box p {
-  font-family: 'Unica One', serif;
+  color: white;
+  background-color: rgba(0, 0, 14, 0.65);
+  border-radius: 3em;
+  font-family: 'Unica One', sans-serif;
+  font-size: 2.5em;
   margin-bottom: auto;
-  width: 35em;
+  width: 30em;
+  margin: auto;
+  padding: 1.2em 1em;
 }

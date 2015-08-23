@@ -2,8 +2,9 @@
 
 <h2 class="h2_sign_in">Sign In</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="sign_in_box">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -13,7 +14,7 @@
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-</div>
+
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -26,3 +27,4 @@
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
+</div>

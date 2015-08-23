@@ -21,7 +21,7 @@
   //  background: -webkit-linear-gradient(to left top, #F2F2BE, #A8DBA8, #79BD9A, #3B8686); /* Chrome10+,Safari5.1+ */
   // background: -o-linear-gradient(to left top, #F2F2BE, #A8DBA8, #79BD9A, #3B8686); /* Opera 12+ */
   // background: -ms-linear-gradient(to left top, #F2F2BE, #A8DBA8, #79BD9A, #3B8686); /* IE10+ */
-   background: linear-gradient(to left top, #F2F2BE, #A8DBA8, #79BD9A, #3B8686 ); /* W3C */
+   background: linear-gradient(to left top, #F2F2BE, #A8DBA8, #79BD9A, #3B8686, #08565A ); /* W3C */
    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2BE', endColorstr='#08565A',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
    background-attachment: fixed;
    background-repeat: no-repeat;
@@ -103,10 +103,10 @@ h1 {
 body>.nav_bar>.nav_bar1>ul>li:hover .nav_bar {
   /*height: 5.385em;*/
 }
-/*.nav_bar li ul:hover {
-  background: #555;
-  color: #fff;
-}*/
+// .nav_bar li ul:hover {
+//   background: #555;
+//   color: #fff;
+// }
 
 .nav_bar ul li ul {
   padding: 0;

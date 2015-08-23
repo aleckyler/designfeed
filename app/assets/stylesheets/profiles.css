@@ -16,8 +16,8 @@
   color: white;
   font-family: 'Unica One', serif;
   font-size: 3em;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0.35em;
+  margin-bottom: 0.3em;
 }
 
 .about_me {
@@ -40,7 +40,7 @@ div.about_me {
   text-align: start;
   border-radius: 3.5em;
   width: auto;
-  padding: 1.3em 1.7em;
+  padding: 1.5em 2em;
   margin: 1.5em auto 1.3em;
 }
 
@@ -118,30 +118,6 @@ div.profile_subs {
     text-decoration: none;
   }
 
-  /* This is to modify the appearance of the links  */
-
-a:link {
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: inherit;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-a:active {
-  font-weight: bold;
-  text-decoration: none;
-}
-
 /* This is the CSS for the pre-set avatar images. */
 
 .avatar_mini {
@@ -186,13 +162,13 @@ a:active {
 
 }
 
-/* This modifies the 'Upload Your Avatar Here' text and link */
+/* This modifies the "Upload Your Avatar 'Here'" link */
 
 .here_link:link, .here_link:visited {
     color: white;
 }
 .here_link:hover {
-    color: #;
+    color: black;
     background-color: inherit;
     text-decoration: none;
 }
@@ -211,7 +187,6 @@ a:active {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /* This shows a visible horizontal scroll bar when scrolling
 through the pre-set avatar images. The background of the avatar turns

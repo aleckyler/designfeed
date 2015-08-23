@@ -18,6 +18,7 @@ gem 'omniauth-github'
   # gem 'pg'
 # end
 
+gem 'rails_12factor', group: :production
 gem 'font-awesome-sass'
 
 # Use SCSS for stylesheets

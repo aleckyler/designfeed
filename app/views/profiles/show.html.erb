@@ -33,7 +33,7 @@
     <strong>My Submissions:</strong>
   </p><br>
   <% Submission.where(user_id: @profile.user_id).each do |submission| %>
-    <li class="profile_li"><%= link_to "#{submission.title.truncate(44)}", submission %></li>
+    <li class="profile_sub_li"><%= link_to "#{submission.title.truncate(44)}", submission %></li>
   <% end %>
 <br><br>
   <p class="profile_p">
@@ -42,7 +42,7 @@
   <% array = [] %>
   <% Response.where(user_id: @profile.user_id).each do |response| %>
     <% if !(array.include? response.submission_id) %>
-      <li class="profile_li"><%= link_to "#{Submission.where(id: response.submission_id).first.title.truncate(44)}", Submission.where(id: response.submission_id).first %></li>
+      <li class="profile_sub_li"><%= link_to "#{Submission.where(id: response.submission_id).first.title.truncate(44)}", Submission.where(id: response.submission_id).first %></li>
       <% array << response.submission_id %>
     <% end %>
   <% end %>

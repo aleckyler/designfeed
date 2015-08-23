@@ -59,24 +59,49 @@ div.profile_subs {
     font-size: 1.6em;
   }
 
+
+/*  These are for the bottom links above the footer text */
   .profile_li a, a.profile_li {
-    color: #79BD9A;
+    color: white;
     font-size: 1.35em;
     font-weight: bold;
   }
 
   .profile_li a:link, a.profile_li:link {
-    color: #79BD9A;
+    color: white;
     font-weight: bold;
   }
 
   .profile_li a:visited, a.profile_li:visited {
-    color: #79BD9A;
+    color: white;
     font-weight: bold;
   }
 
   .profile_li a:hover, a.profile_li:hover{
-    color: #CFF09E;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* These are for the links in user profile view    */
+
+  .profile_sub_li a, a.profile_sub_li {
+    color: #08565A;
+    font-size: 1.35em;
+    font-weight: bold;
+  }
+
+  .profile_sub_li a:link, a.profile_sub_li:link {
+    color: #08565A;
+    font-weight: bold;
+  }
+
+  .profile_sub_li a:visited, a.profile_sub_li:visited {
+    color: #08565A;
+    font-weight: bold;
+  }
+
+  .profile_sub_li a:hover, a.profile_sub_li:hover{
+    color: #79BD9A;
     font-weight: bold;
   }
 

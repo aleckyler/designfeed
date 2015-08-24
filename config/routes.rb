@@ -32,7 +32,6 @@ Rails.application.routes.draw do
 
   get 'submissions/:submission_id/upvote', to: 'votes#upvote', as: :new_upvote
   get 'submissions/:submission_id/downvote', to: 'votes#downvote', as: :new_downvote
-  get '/auth/github/callback', to: 'profiles#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

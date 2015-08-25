@@ -4,13 +4,41 @@
 */
 
 .faq_box p {
-  color: white;
-  background-color: rgba(40, 44, 44, 0.6);
+  color: black;
+  background: white;
+  border-radius: 3.7em;
   font-family: 'Unica One', sans-serif;
-  font-size: 2.65em;
+  font-size: 2.7em;
   font-weight: bold;
   margin-bottom: auto;
   width: 26em;
   margin: auto;
   padding: 1.2em 1.3em;
+}
+
+.faq_box a {
+  color: black;
+  font-family: 'Unica One', sans-serif;
+  font-size: 1.2em;
+}
+
+.faq_box a:link {
+  color: #4ECDC4;
+  background-color: inherit;
+  text-decoration: none;
+}
+
+.faq_box a:visited {
+  color: #4ECDC4;
+  background-color: inherit;
+}
+
+.faq_box a:hover {
+  color: #3B8686;
+  background-color: inherit;
+}
+
+.faq_box a:active {
+  background-color: inherit;
+  color: #4ECDC4;
 }
